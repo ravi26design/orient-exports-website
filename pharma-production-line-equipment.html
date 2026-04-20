@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Pharma Production Line Equipment — Orient Exports Limited</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;700;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<style>
+:root{
+  --navy:#0d2140;--blue:#1a3a6b;--mid-blue:#1e5799;--red:#c0202a;--red-light:#e63946;
+  --gold:#d4a853;--white:#fff;--off-white:#f5f7fa;--gray:#8899aa;--text:#1a2a3a;
+}
+body{font-family:'Barlow',sans-serif;color:var(--text);overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Barlow Condensed',sans-serif;font-weight:700;letter-spacing:-.5px}
+.section-label{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--red);display:inline-block;margin-bottom:14px}
+.section-title{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:clamp(2rem,4.5vw,3.5rem);line-height:1.05;margin-bottom:18px;color:var(--navy)}
+.section-sub{font-size:17px;line-height:1.6;color:#4a5a6a}
+section{padding:80px 0;position:relative}
+
+/* NAV */
+.navbar{transition:background .3s,box-shadow .3s;padding:.9rem 0;background:rgba(13,33,64,.97);backdrop-filter:blur(12px);box-shadow:0 2px 30px rgba(0,0,0,.4)}
+.navbar .navbar-brand{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:22px;color:#fff;letter-spacing:2px;text-transform:uppercase;display:flex;align-items:center;gap:10px}
+.nav-logo-icon{width:38px;height:38px;background:var(--red);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:18px;color:#fff}
+.navbar .nav-link{color:rgba(255,255,255,.85)!important;font-size:13px;font-weight:500;letter-spacing:1px;text-transform:uppercase;margin:0 8px}
+.navbar .nav-link:hover{color:#fff!important}
+.btn-brand{background:var(--red);color:#fff;border:none;padding:10px 22px;border-radius:2px;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase}
+.btn-brand:hover{background:var(--red-light);color:#fff}
+.btn-outline-brand{border:2px solid var(--navy);color:var(--navy);padding:10px 22px;border-radius:2px;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;background:transparent}
+.btn-outline-brand:hover{background:var(--navy);color:#fff}
+
+/* PAGE HERO */
+.page-hero{padding:140px 0 70px;background:linear-gradient(135deg,#0d2140 0%,#1a3a6b 60%,#c0202a 130%);color:#fff}
+.breadcrumb-wrap{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:22px}
+.breadcrumb-wrap a{color:rgba(255,255,255,.85);text-decoration:none}
+.breadcrumb-wrap a:hover{color:var(--gold)}
+.breadcrumb-wrap .sep{color:var(--red-light);margin:0 10px}
+.page-hero .cat{display:inline-block;background:var(--red);color:#fff;padding:6px 14px;border-radius:2px;font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:700;margin-bottom:18px}
+.page-hero h1{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(2.5rem,6vw,4.5rem);line-height:1;text-transform:uppercase;margin-bottom:20px}
+.page-hero .lead-text{font-size:18px;line-height:1.6;color:rgba(255,255,255,.85);max-width:720px}
+.hero-meta{display:flex;flex-wrap:wrap;gap:30px;margin-top:36px;padding-top:26px;border-top:1px solid rgba(255,255,255,.15)}
+.hero-meta-item .meta-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+.hero-meta-item .meta-val{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:20px;color:#fff}
+
+/* OVERVIEW */
+.overview-img{width:100%;border-radius:4px;box-shadow:0 20px 60px rgba(0,0,0,.15)}
+.overview-tag{position:absolute;top:-18px;left:-18px;background:var(--red);color:#fff;padding:16px 22px;border-radius:4px;text-align:center}
+.overview-tag-num{display:block;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:30px;line-height:1}
+.overview-tag-txt{display:block;font-size:10px;letter-spacing:2px;text-transform:uppercase;margin-top:3px}
+
+/* FEATURES */
+#features{background:var(--off-white)}
+.feature-card{background:#fff;padding:30px 26px;border-radius:4px;height:100%;border:1px solid #e5e9f0;position:relative;transition:transform .3s,box-shadow .3s}
+.feature-card:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(0,0,0,.08)}
+.feature-num{position:absolute;top:14px;right:18px;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:48px;color:rgba(192,32,42,.1);line-height:1}
+.feature-icon{font-size:32px;display:block;margin-bottom:16px}
+.feature-name{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:21px;color:var(--navy);margin-bottom:10px}
+.feature-desc{font-size:14px;line-height:1.6;color:#6a7a8a}
+
+/* SPECS */
+#specs{background:#fff}
+.spec-table{width:100%;border-collapse:collapse}
+.spec-table tr{border-bottom:1px solid #e5e9f0}
+.spec-table td{padding:16px 8px;font-size:15px}
+.spec-table td:first-child{font-family:'Barlow Condensed',sans-serif;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:1px;width:42%}
+.spec-table td:last-child{color:#4a5a6a}
+.spec-cert-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.cert-pill{background:var(--navy);color:#fff;padding:8px 14px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:13px;letter-spacing:1.5px;border-radius:2px}
+.cert-pill.gold{background:var(--gold);color:var(--navy)}
+
+/* APPLICATIONS */
+#apps{background:linear-gradient(160deg,#0d2140 0%,#1a3a6b 100%);color:#fff}
+#apps .section-label{color:var(--red-light)}
+#apps .section-title{color:#fff}
+.app-item{display:flex;gap:16px;padding:22px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:4px;margin-bottom:14px;transition:all .3s}
+.app-item:hover{background:rgba(192,32,42,.15);border-color:var(--red-light)}
+.app-icon{font-size:28px;flex-shrink:0}
+.app-name{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:18px;color:#fff;margin-bottom:4px}
+.app-desc{font-size:13px;line-height:1.5;color:rgba(255,255,255,.7)}
+
+/* PROCESS */
+#process{background:var(--off-white)}
+.proc-step{background:#fff;padding:26px 22px;border-radius:4px;height:100%;border:1px solid #e5e9f0;position:relative}
+.proc-num{width:42px;height:42px;border-radius:50%;background:var(--red);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:20px;margin-bottom:14px}
+.proc-name{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:18px;color:var(--navy);margin-bottom:8px}
+.proc-desc{font-size:13px;line-height:1.5;color:#6a7a8a}
+
+/* RELATED */
+.product-card{background:#fff;padding:24px;border-radius:4px;border:1px solid #e5e9f0;transition:all .3s;height:100%;text-decoration:none;display:block}
+.product-card:hover{transform:translateY(-4px);border-color:var(--red);box-shadow:0 14px 30px rgba(0,0,0,.08)}
+.product-cat-label{display:inline-block;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--red);font-weight:700;margin-bottom:10px}
+.product-name{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:18px;color:var(--navy);line-height:1.2}
+.prod-icon{font-size:28px;margin-top:14px}
+
+/* CTA */
+#cta{background:var(--red);color:#fff;padding:70px 0;text-align:center}
+#cta h2{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(2rem,4.5vw,3.2rem);text-transform:uppercase;margin-bottom:18px;color:#fff}
+#cta p{font-size:17px;color:rgba(255,255,255,.9);max-width:620px;margin:0 auto 30px}
+.btn-cta-white{background:#fff;color:var(--red);padding:14px 30px;font-weight:700;letter-spacing:2px;text-transform:uppercase;border-radius:2px;font-size:13px;border:none}
+.btn-cta-white:hover{background:var(--navy);color:#fff}
+.btn-cta-outline{background:transparent;color:#fff;border:2px solid #fff;padding:12px 28px;font-weight:700;letter-spacing:2px;text-transform:uppercase;border-radius:2px;font-size:13px}
+.btn-cta-outline:hover{background:#fff;color:var(--red)}
+
+/* FOOTER */
+footer{background:#081629;color:#fff;padding:40px 0;text-align:center}
+.footer-brand{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:18px;letter-spacing:4px;margin-bottom:10px}
+.footer-copy{font-size:12px;color:rgba(255,255,255,.5);letter-spacing:1px}
+.footer-links{margin-top:16px}
+.footer-links a{color:rgba(255,255,255,.7);margin:0 14px;font-size:12px;letter-spacing:2px;text-transform:uppercase;text-decoration:none}
+.footer-links a:hover{color:var(--red-light)}
+
+.fade-in{opacity:0;transform:translateY(24px);transition:opacity .8s,transform .8s}
+.fade-in.visible{opacity:1;transform:none}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container-fluid px-4 px-lg-5">
+    <a class="navbar-brand" href="index.html"><span class="nav-logo-icon">O</span>Orient</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+      <ul class="navbar-nav align-items-lg-center">
+        <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#services">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#products">Products</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#pharma">Pharma</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#quality">Quality</a></li>
+        <li class="nav-item ms-lg-3"><a class="btn btn-brand" href="index.html#contact">Get a Quote</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb-wrap">
+      <a href="index.html">Home</a><span class="sep">/</span>
+      <a href="index.html#products">Products</a><span class="sep">/</span>
+      <a href="index.html#products">Pharma &amp; Cleanroom</a><span class="sep">/</span>
+      <span>Pharma Production Line Equipment</span>
+    </div>
+    <span class="cat">Equipment · Pharma &amp; Cleanroom</span>
+    <h1>Pharma Production<br/>Line Equipment</h1>
+    <p class="lead-text">End-to-end pharmaceutical manufacturing equipment — tablet presses, capsule fillers, granulators, coaters, blister lines and liquid filling systems. Sourced from GMP-compliant Chinese manufacturers and delivered with full commissioning support.</p>
+    <div class="hero-meta">
+      <div class="hero-meta-item"><div class="meta-label">Compliance</div><div class="meta-val">GMP · cGMP · ISO</div></div>
+      <div class="hero-meta-item"><div class="meta-label">Capacity</div><div class="meta-val">R&amp;D to Industrial</div></div>
+      <div class="hero-meta-item"><div class="meta-label">Lead Time</div><div class="meta-val">45 – 90 Days</div></div>
+      <div class="hero-meta-item"><div class="meta-label">Origin</div><div class="meta-val">Guangzhou, China</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- OVERVIEW -->
+<section>
+  <div class="container">
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-6 fade-in">
+        <div class="position-relative">
+          <img src="img/img_5.jpeg" alt="Pharma Production Line" class="overview-img"/>
+          <div class="overview-tag"><span class="overview-tag-num">50+</span><span class="overview-tag-txt">Equipment Types</span></div>
+        </div>
+      </div>
+      <div class="col-lg-6 fade-in">
+        <span class="section-label">Product Overview</span>
+        <h2 class="section-title">Complete Solutions for Solid, Liquid &amp; Semi-Solid Dosage Forms</h2>
+        <p class="section-sub mb-3">Orient Exports sources a full range of pharmaceutical production line equipment — from raw material handling to final packaging. Every machine is factory-tested, GMP-validated and backed by on-site installation support through our China-based engineering partners.</p>
+        <p class="section-sub mb-4">Whether you're setting up a new manufacturing facility, expanding capacity, or upgrading a specific production line, we match the right equipment to your batch size, product category and regulatory market.</p>
+        <div class="d-flex flex-wrap gap-3">
+          <a href="index.html#contact" class="btn btn-brand">Request a Quote</a>
+          <a href="#specs" class="btn btn-outline-brand">View Specifications</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section id="features">
+  <div class="container">
+    <div class="row mb-5">
+      <div class="col-lg-7 fade-in">
+        <span class="section-label">Why This Equipment</span>
+        <h2 class="section-title">Built For Compliance. Engineered For Throughput.</h2>
+      </div>
+    </div>
+    <div class="row g-4 fade-in">
+      <div class="col-md-6 col-lg-4"><div class="feature-card"><div class="feature-num">01</div><span class="feature-icon">⚙️</span><div class="feature-name">GMP-Compliant Design</div><p class="feature-desc">Stainless steel 316L contact surfaces, crevice-free welds and CIP/SIP-ready geometry for pharma-grade hygiene.</p></div></div>
+      <div class="col-md-6 col-lg-4"><div class="feature-card"><div class="feature-num">02</div><span class="feature-icon">📊</span><div class="feature-name">PLC &amp; HMI Control</div><p class="feature-desc">Siemens / Mitsubishi PLC with touchscreen HMI, recipe management and 21 CFR Part 11 audit trail support.</p></div></div>
+      <div class="col-md-6 col-lg-4"><div class="feature-card"><div class="feature-num">03</div><span class="feature-icon">🔧</span><div class="feature-name">Modular Line Integration</div><p class="feature-desc">Every unit is designed to integrate with upstream and downstream machines for a continuous production flow.</p></div></div>
+      <div class="col-md-6 col-lg-4"><div class="feature-card"><div class="feature-num">04</div><span class="feature-icon">🧪</span><div class="feature-name">Validated &amp; FAT Tested</div><p class="feature-desc">Factory Acceptance Testing conducted in our partner facility before shipment — DQ, IQ, OQ documentation included.</p></div></div>
+      <div class="col-md-6 col-lg-4"><div class="feature-card"><div class="feature-num">05</div><span class="feature-icon">🛠️</span><div class="feature-name">On-Site Commissioning</div><p class="feature-desc">Engineer deployment to your site for installation, operator training and Site Acceptance Testing.</p></div></div>
+      <div class="col-md-6 col-lg-4"><div class="feature-card"><div class="feature-num">06</div><span class="feature-icon">📦</span><div class="feature-name">Spare Parts Package</div><p class="feature-desc">Two-year recommended spares list included with every equipment shipment for zero-downtime operation.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SPECS -->
+<section id="specs">
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-6 fade-in">
+        <span class="section-label">Technical Specifications</span>
+        <h2 class="section-title">Standard Configuration</h2>
+        <table class="spec-table">
+          <tr><td>Contact Material</td><td>SS 316L (pharma grade)</td></tr>
+          <tr><td>Structural Frame</td><td>SS 304 / Powder-coated steel</td></tr>
+          <tr><td>Control System</td><td>Siemens S7-1200 / Mitsubishi FX</td></tr>
+          <tr><td>HMI Interface</td><td>7" / 10" colour touchscreen</td></tr>
+          <tr><td>Motor Standard</td><td>ABB / Siemens IE3 efficiency</td></tr>
+          <tr><td>Pneumatics</td><td>SMC / Festo</td></tr>
+          <tr><td>Surface Finish</td><td>Ra ≤ 0.4 µm (product contact)</td></tr>
+          <tr><td>Ingress Protection</td><td>IP54 – IP65 (electrical panels)</td></tr>
+          <tr><td>Voltage</td><td>380V / 50 Hz, 3 Phase (customisable)</td></tr>
+          <tr><td>Documentation</td><td>DQ · IQ · OQ · FAT · SAT Protocol</td></tr>
+        </table>
+        <div class="spec-cert-row">
+          <span class="cert-pill">GMP</span>
+          <span class="cert-pill">cGMP</span>
+          <span class="cert-pill gold">ISO 9001</span>
+          <span class="cert-pill">CE</span>
+          <span class="cert-pill gold">21 CFR Part 11</span>
+        </div>
+      </div>
+      <div class="col-lg-6 fade-in">
+        <span class="section-label">Equipment Range</span>
+        <h2 class="section-title">Production Line Units</h2>
+        <div class="row g-3">
+          <div class="col-6 col-md-4"><a href="#" class="product-card"><div class="product-cat-label">Solid Dosage</div><div class="product-name">Tablet Press</div><div class="prod-icon">💊</div></a></div>
+          <div class="col-6 col-md-4"><a href="#" class="product-card"><div class="product-cat-label">Solid Dosage</div><div class="product-name">Capsule Filler</div><div class="prod-icon">🧬</div></a></div>
+          <div class="col-6 col-md-4"><a href="#" class="product-card"><div class="product-cat-label">Granulation</div><div class="product-name">Wet &amp; Dry Granulator</div><div class="prod-icon">⚗️</div></a></div>
+          <div class="col-6 col-md-4"><a href="#" class="product-card"><div class="product-cat-label">Coating</div><div class="product-name">Film Coater</div><div class="prod-icon">🎯</div></a></div>
+          <div class="col-6 col-md-4"><a href="#" class="product-card"><div class="product-cat-label">Packaging</div><div class="product-name">Blister Line</div><div class="prod-icon">📦</div></a></div>
+          <div class="col-6 col-md-4"><a href="#" class="product-card"><div class="product-cat-label">Liquid</div><div class="product-name">Liquid Filling</div><div class="prod-icon">🧴</div></a></div>
+          <div class="col-6 col-md-4"><a href="#" class="product-card"><div class="product-cat-label">Mixing</div><div class="product-name">High Shear Mixer</div><div class="prod-icon">🌀</div></a></div>
+          <div class="col-6 col-md-4"><a href="#" class="product-card"><div class="product-cat-label">Drying</div><div class="product-name">Fluid Bed Dryer</div><div class="prod-icon">💨</div></a></div>
+          <div class="col-6 col-md-4"><a href="#" class="product-card"><div class="product-cat-label">Utility</div><div class="product-name">Water For Injection</div><div class="prod-icon">💧</div></a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- APPLICATIONS -->
+<section id="apps">
+  <div class="container">
+    <div class="row mb-5">
+      <div class="col-lg-7 fade-in">
+        <span class="section-label">Industry Applications</span>
+        <h2 class="section-title">Where This Equipment Is Deployed</h2>
+        <p class="section-sub" style="color:rgba(255,255,255,.7)">Our production line equipment serves pharmaceutical manufacturers, contract manufacturing organizations, and research institutions across global regulated markets.</p>
+      </div>
+    </div>
+    <div class="row g-4 fade-in">
+      <div class="col-lg-6">
+        <div class="app-item"><span class="app-icon">🏭</span><div><div class="app-name">Pharmaceutical Manufacturing</div><div class="app-desc">Full-scale tablet, capsule, liquid and sterile product production lines for branded and generic pharma.</div></div></div>
+        <div class="app-item"><span class="app-icon">🧪</span><div><div class="app-name">Contract Manufacturing (CMO / CDMO)</div><div class="app-desc">Flexible, multi-product lines designed for fast changeover between different formulations and batch sizes.</div></div></div>
+        <div class="app-item"><span class="app-icon">🔬</span><div><div class="app-name">R&amp;D &amp; Pilot Plants</div><div class="app-desc">Lab-scale and pilot-scale equipment for formulation development, scale-up trials and clinical batch production.</div></div></div>
+      </div>
+      <div class="col-lg-6">
+        <div class="app-item"><span class="app-icon">🏥</span><div><div class="app-name">Hospital Pharmacies</div><div class="app-desc">Compounding and small-batch production units for hospital-scale pharmaceutical preparation needs.</div></div></div>
+        <div class="app-item"><span class="app-icon">🌿</span><div><div class="app-name">Nutraceuticals &amp; Ayurveda</div><div class="app-desc">Dedicated production lines for nutraceutical supplements, herbal extracts and Ayurvedic formulations.</div></div></div>
+        <div class="app-item"><span class="app-icon">🐾</span><div><div class="app-name">Veterinary Pharma</div><div class="app-desc">Animal-health dosage form equipment — premixes, boluses, injectables and medicated feed manufacturing.</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process">
+  <div class="container">
+    <div class="row mb-5">
+      <div class="col-lg-7 fade-in">
+        <span class="section-label">How We Deliver</span>
+        <h2 class="section-title">From Enquiry to Installation</h2>
+      </div>
+    </div>
+    <div class="row g-3 fade-in">
+      <div class="col-sm-6 col-lg-3"><div class="proc-step"><div class="proc-num">1</div><div class="proc-name">Technical Briefing</div><p class="proc-desc">We gather your batch size, product category, regulatory market and facility layout.</p></div></div>
+      <div class="col-sm-6 col-lg-3"><div class="proc-step"><div class="proc-num">2</div><div class="proc-name">Supplier Matching</div><p class="proc-desc">We shortlist 2–3 verified manufacturers and present quotations with lead times.</p></div></div>
+      <div class="col-sm-6 col-lg-3"><div class="proc-step"><div class="proc-num">3</div><div class="proc-name">Factory Acceptance</div><p class="proc-desc">FAT testing at partner facility with your team joining in person or via video.</p></div></div>
+      <div class="col-sm-6 col-lg-3"><div class="proc-step"><div class="proc-num">4</div><div class="proc-name">Ship &amp; Commission</div><p class="proc-desc">Logistics, customs, site installation, SAT and operator training — all handled.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- RELATED -->
+<section>
+  <div class="container">
+    <div class="row mb-5">
+      <div class="col-lg-7 fade-in">
+        <span class="section-label">You May Also Need</span>
+        <h2 class="section-title">Related Products</h2>
+      </div>
+    </div>
+    <div class="row g-3 fade-in">
+      <div class="col-sm-6 col-md-4 col-lg-3"><a href="#" class="product-card"><div class="product-cat-label">Equipment</div><div class="product-name">Packaging Line Equipment</div><div class="prod-icon">📦</div></a></div>
+      <div class="col-sm-6 col-md-4 col-lg-3"><a href="#" class="product-card"><div class="product-cat-label">Equipment</div><div class="product-name">R&amp;D Level Capacity Equipment</div><div class="prod-icon">🔬</div></a></div>
+      <div class="col-sm-6 col-md-4 col-lg-3"><a href="#" class="product-card"><div class="product-cat-label">Furniture</div><div class="product-name">R&amp;D &amp; Laboratory Furniture</div><div class="prod-icon">🪑</div></a></div>
+      <div class="col-sm-6 col-md-4 col-lg-3"><a href="#" class="product-card"><div class="product-cat-label">Furniture</div><div class="product-name">Stainless Steel Production Furniture</div><div class="prod-icon">⚗️</div></a></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta">
+  <div class="container">
+    <h2>Ready To Spec Your Line?</h2>
+    <p>Share your batch sizes, product categories and regulatory market. We'll match you with the right equipment and verified manufacturers within 48 hours.</p>
+    <div class="d-flex justify-content-center gap-3 flex-wrap">
+      <a href="index.html#contact" class="btn btn-cta-white">Request a Quote</a>
+      <a href="index.html#services" class="btn btn-cta-outline">See Our Process</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-brand">⊕ ORIENT EXPORTS LIMITED</div>
+    <div class="footer-copy">© 2025 Orient Exports Limited · Guangzhou, China · Australia / China / Canada / India / USA</div>
+    <div class="footer-links">
+      <a href="index.html#about">About</a><a href="index.html#services">Services</a><a href="index.html#products">Products</a><a href="index.html#contact">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting&&e.target.classList.add('visible')),{threshold:.1});
+document.querySelectorAll('.fade-in').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

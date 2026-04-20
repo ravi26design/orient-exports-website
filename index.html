@@ -72,6 +72,14 @@ section{padding:100px 0;position:relative}
 .mv-text{line-height:1.7;color:rgba(255,255,255,.8)}
 .mv-tagline{text-align:center;margin-top:50px;font-family:'Barlow Condensed',sans-serif;font-size:20px;letter-spacing:8px;text-transform:uppercase;color:var(--gold)}
 
+/* MV BANNER */
+.mv-banner{position:relative;padding:140px 0;color:#fff;background-image:url('img/img_1.jpeg');background-size:cover;background-position:center;background-attachment:fixed}
+.mv-banner::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(13,33,64,.92) 0%,rgba(26,58,107,.85) 50%,rgba(30,87,153,.88) 100%)}
+.mv-banner-content{position:relative;z-index:2;max-width:780px}
+.mv-banner-title{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(2.2rem,5vw,3.8rem);line-height:1.05;text-transform:uppercase;margin-bottom:20px;color:#fff}
+.mv-banner-sub{font-size:18px;line-height:1.7;color:rgba(255,255,255,.88);margin-bottom:32px}
+@media(max-width:768px){.mv-banner{padding:90px 0;background-attachment:scroll}}
+
 /* STRENGTHS */
 .strength-card{background:#fff;padding:36px 28px;border-radius:4px;height:100%;border:1px solid #e5e9f0;position:relative;transition:transform .3s,box-shadow .3s}
 .strength-card:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(0,0,0,.08)}
@@ -274,6 +282,16 @@ footer{background:#081629;color:#fff;padding:40px 0;text-align:center}
   </div>
 </section>
 
+<!-- MISSION BANNER -->
+<section class="mv-banner">
+  <div class="container mv-banner-content">
+    <span class="section-label" style="color:var(--gold)">Our Foundation</span>
+    <h2 class="mv-banner-title">Driven By Mission.<br/>Guided By Vision.</h2>
+    <p class="mv-banner-sub">Integrity, precision and partnership are non-negotiable. Every shipment we handle reflects a commitment built over a decade of sourcing excellence — across Pharma, Industrial, Building and Agriculture.</p>
+    <a href="#services" class="btn btn-brand">Explore Our Process</a>
+  </div>
+</section>
+
 <!-- STRENGTHS -->
 <section id="strengths">
   <div class="container">
@@ -335,70 +353,70 @@ footer{background:#081629;color:#fff;padding:40px 0;text-align:center}
     <div class="tab-content">
       <div class="tab-pane fade show active" id="tab-pharma-eq">
         <div class="row g-3">
-          <div class="col-sm-6 col-md-4 col-lg-3"><a href="pharma-production-line.html" class="product-card text-decoration-none"><div class="product-cat-label">Equipment</div><div class="product-name">Pharma Production Line Equipment</div><div class="prod-icon">🏭</div></a></div>
-          <div class="col-sm-6 col-md-4 col-lg-3"><div class="product-card"><div class="product-cat-label">Equipment</div><div class="product-name">Packaging Line Equipment</div><div class="prod-icon">📦</div></div></div>
-          <div class="col-sm-6 col-md-4 col-lg-3"><div class="product-card"><div class="product-cat-label">Equipment</div><div class="product-name">R&amp;D Level Capacity Equipment</div><div class="prod-icon">🔬</div></div></div>
-          <div class="col-sm-6 col-md-4 col-lg-3"><div class="product-card"><div class="product-cat-label">Furniture</div><div class="product-name">R&amp;D &amp; Laboratory Furniture</div><div class="prod-icon">🪑</div></div></div>
-          <div class="col-sm-6 col-md-4 col-lg-3"><div class="product-card"><div class="product-cat-label">Facilities</div><div class="product-name">Healthcare Facilities</div><div class="prod-icon">🏥</div></div></div>
-          <div class="col-sm-6 col-md-4 col-lg-3"><div class="product-card"><div class="product-cat-label">Secure</div><div class="product-name">Customized Vault Room</div><div class="prod-icon">🔒</div></div></div>
-          <div class="col-sm-6 col-md-4 col-lg-3"><div class="product-card"><div class="product-cat-label">Secure</div><div class="product-name">Controlled Substance Cage</div><div class="prod-icon">🔐</div></div></div>
-          <div class="col-sm-6 col-md-4 col-lg-3"><div class="product-card"><div class="product-cat-label">Furniture</div><div class="product-name">Stainless Steel Production Furniture</div><div class="prod-icon">⚗️</div></div></div>
+          <div class="col-sm-6 col-md-4 col-lg-3"><a href="pharma-production-line-equipment.html" class="product-card"><div class="product-cat-label">Equipment</div><div class="product-name">Pharma Production Line Equipment</div><div class="prod-icon">🏭</div></a></div>
+          <div class="col-sm-6 col-md-4 col-lg-3"><a href="packaging-line-equipment.html" class="product-card"><div class="product-cat-label">Equipment</div><div class="product-name">Packaging Line Equipment</div><div class="prod-icon">📦</div></a></div>
+          <div class="col-sm-6 col-md-4 col-lg-3"><a href="randd-level-capacity-equipment.html" class="product-card"><div class="product-cat-label">Equipment</div><div class="product-name">R&amp;D Level Capacity Equipment</div><div class="prod-icon">🔬</div></a></div>
+          <div class="col-sm-6 col-md-4 col-lg-3"><a href="randd-and-laboratory-furniture.html" class="product-card"><div class="product-cat-label">Furniture</div><div class="product-name">R&amp;D &amp; Laboratory Furniture</div><div class="prod-icon">🪑</div></a></div>
+          <div class="col-sm-6 col-md-4 col-lg-3"><a href="healthcare-facilities.html" class="product-card"><div class="product-cat-label">Facilities</div><div class="product-name">Healthcare Facilities</div><div class="prod-icon">🏥</div></a></div>
+          <div class="col-sm-6 col-md-4 col-lg-3"><a href="customized-vault-room.html" class="product-card"><div class="product-cat-label">Secure</div><div class="product-name">Customized Vault Room</div><div class="prod-icon">🔒</div></a></div>
+          <div class="col-sm-6 col-md-4 col-lg-3"><a href="controlled-substance-cage.html" class="product-card"><div class="product-cat-label">Secure</div><div class="product-name">Controlled Substance Cage</div><div class="prod-icon">🔐</div></a></div>
+          <div class="col-sm-6 col-md-4 col-lg-3"><a href="stainless-steel-production-furniture.html" class="product-card"><div class="product-cat-label">Furniture</div><div class="product-name">Stainless Steel Production Furniture</div><div class="prod-icon">⚗️</div></a></div>
         </div>
       </div>
       <div class="tab-pane fade" id="tab-api">
         <div class="row g-3">
-          <div class="col-sm-6 col-md-4 col-lg-3"><div class="product-card"><div class="product-cat-label">API</div><div class="product-name">Pharma Production Ingredients</div><div class="prod-icon">💊</div></div></div>
-          <div class="col-sm-6 col-md-4 col-lg-3"><div class="product-card"><div class="product-cat-label">API</div><div class="product-name">Pharma Excipients</div><div class="prod-icon">🧪</div></div></div>
+          <div class="col-sm-6 col-md-4 col-lg-3"><a href="pharma-production-ingredients.html" class="product-card"><div class="product-cat-label">API</div><div class="product-name">Pharma Production Ingredients</div><div class="prod-icon">💊</div></a></div>
+          <div class="col-sm-6 col-md-4 col-lg-3"><a href="pharma-excipients.html" class="product-card"><div class="product-cat-label">API</div><div class="product-name">Pharma Excipients</div><div class="prod-icon">🧪</div></a></div>
         </div>
       </div>
       <div class="tab-pane fade" id="tab-facility">
         <div class="row g-3">
-          <div class="col-sm-6 col-md-4 col-lg-3"><div class="product-card"><div class="product-cat-label">Panels</div><div class="product-name">Wall &amp; Ceiling Panel Systems</div><div class="prod-icon">🏗️</div></div></div>
-          <div class="col-sm-6 col-md-4 col-lg-3"><div class="product-card"><div class="product-cat-label">Flooring</div><div class="product-name">Epoxy Flooring &amp; Waterproof Coating</div><div class="prod-icon">🎨</div></div></div>
-          <div class="col-sm-6 col-md-4 col-lg-3"><div class="product-card"><div class="product-cat-label">Lighting</div><div class="product-name">Dual Color LED Panel Lights</div><div class="prod-icon">💡</div></div></div>
-          <div class="col-sm-6 col-md-4 col-lg-3"><div class="product-card"><div class="product-cat-label">HVAC</div><div class="product-name">HVAC Ducting Solution</div><div class="prod-icon">🌬️</div></div></div>
-          <div class="col-sm-6 col-md-4 col-lg-3"><div class="product-card"><div class="product-cat-label">Insulation</div><div class="product-name">Insulation &amp; Acoustic Solution</div><div class="prod-icon">🔇</div></div></div>
-          <div class="col-sm-6 col-md-4 col-lg-3"><div class="product-card"><div class="product-cat-label">Structure</div><div class="product-name">Light Steel Pre-Fabricated Structure</div><div class="prod-icon">🏛️</div></div></div>
-          <div class="col-sm-6 col-md-4 col-lg-3"><div class="product-card"><div class="product-cat-label">Access</div><div class="product-name">Doors, Windows &amp; Automated Gates</div><div class="prod-icon">🚪</div></div></div>
-          <div class="col-sm-6 col-md-4 col-lg-3"><div class="product-card"><div class="product-cat-label">Storage</div><div class="product-name">Warehouse Shelving Solution</div><div class="prod-icon">📚</div></div></div>
-          <div class="col-sm-6 col-md-4 col-lg-3"><div class="product-card"><div class="product-cat-label">Power</div><div class="product-name">Oil Free Air Compressor (ASME)</div><div class="prod-icon">⚡</div></div></div>
-          <div class="col-sm-6 col-md-4 col-lg-3"><div class="product-card"><div class="product-cat-label">Power</div><div class="product-name">Power Generator</div><div class="prod-icon">🔋</div></div></div>
-          <div class="col-sm-6 col-md-4 col-lg-3"><div class="product-card"><div class="product-cat-label">Screens</div><div class="product-name">Digital Screens &amp; Signages</div><div class="prod-icon">📺</div></div></div>
-          <div class="col-sm-6 col-md-4 col-lg-3"><div class="product-card"><div class="product-cat-label">Handling</div><div class="product-name">Material Handling Equipment</div><div class="prod-icon">🦺</div></div></div>
+          <div class="col-sm-6 col-md-4 col-lg-3"><a href="wall-and-ceiling-panel-systems.html" class="product-card"><div class="product-cat-label">Panels</div><div class="product-name">Wall &amp; Ceiling Panel Systems</div><div class="prod-icon">🏗️</div></a></div>
+          <div class="col-sm-6 col-md-4 col-lg-3"><a href="epoxy-flooring-and-waterproof-coating.html" class="product-card"><div class="product-cat-label">Flooring</div><div class="product-name">Epoxy Flooring &amp; Waterproof Coating</div><div class="prod-icon">🎨</div></a></div>
+          <div class="col-sm-6 col-md-4 col-lg-3"><a href="dual-color-led-panel-lights.html" class="product-card"><div class="product-cat-label">Lighting</div><div class="product-name">Dual Color LED Panel Lights</div><div class="prod-icon">💡</div></a></div>
+          <div class="col-sm-6 col-md-4 col-lg-3"><a href="hvac-ducting-solution.html" class="product-card"><div class="product-cat-label">HVAC</div><div class="product-name">HVAC Ducting Solution</div><div class="prod-icon">🌬️</div></a></div>
+          <div class="col-sm-6 col-md-4 col-lg-3"><a href="insulation-and-acoustic-solution.html" class="product-card"><div class="product-cat-label">Insulation</div><div class="product-name">Insulation &amp; Acoustic Solution</div><div class="prod-icon">🔇</div></a></div>
+          <div class="col-sm-6 col-md-4 col-lg-3"><a href="light-steel-pre-fabricated-structure.html" class="product-card"><div class="product-cat-label">Structure</div><div class="product-name">Light Steel Pre-Fabricated Structure</div><div class="prod-icon">🏛️</div></a></div>
+          <div class="col-sm-6 col-md-4 col-lg-3"><a href="doors-windows-and-automated-gates.html" class="product-card"><div class="product-cat-label">Access</div><div class="product-name">Doors, Windows &amp; Automated Gates</div><div class="prod-icon">🚪</div></a></div>
+          <div class="col-sm-6 col-md-4 col-lg-3"><a href="warehouse-shelving-solution.html" class="product-card"><div class="product-cat-label">Storage</div><div class="product-name">Warehouse Shelving Solution</div><div class="prod-icon">📚</div></a></div>
+          <div class="col-sm-6 col-md-4 col-lg-3"><a href="oil-free-air-compressor-asme.html" class="product-card"><div class="product-cat-label">Power</div><div class="product-name">Oil Free Air Compressor (ASME)</div><div class="prod-icon">⚡</div></a></div>
+          <div class="col-sm-6 col-md-4 col-lg-3"><a href="power-generator.html" class="product-card"><div class="product-cat-label">Power</div><div class="product-name">Power Generator</div><div class="prod-icon">🔋</div></a></div>
+          <div class="col-sm-6 col-md-4 col-lg-3"><a href="digital-screens-and-signages.html" class="product-card"><div class="product-cat-label">Screens</div><div class="product-name">Digital Screens &amp; Signages</div><div class="prod-icon">📺</div></a></div>
+          <div class="col-sm-6 col-md-4 col-lg-3"><a href="material-handling-equipment.html" class="product-card"><div class="product-cat-label">Handling</div><div class="product-name">Material Handling Equipment</div><div class="prod-icon">🦺</div></a></div>
         </div>
       </div>
       <div class="tab-pane fade" id="tab-consumables">
         <div class="row g-3">
-          <div class="col-sm-6 col-md-4 col-lg-3"><div class="product-card"><div class="product-cat-label">PPE</div><div class="product-name">Nitrile Gloves</div><div class="prod-icon">🧤</div></div></div>
-          <div class="col-sm-6 col-md-4 col-lg-3"><div class="product-card"><div class="product-cat-label">PPE</div><div class="product-name">Aprons &amp; Coverall Suits</div><div class="prod-icon">🥼</div></div></div>
-          <div class="col-sm-6 col-md-4 col-lg-3"><div class="product-card"><div class="product-cat-label">PPE</div><div class="product-name">Shoe Covers</div><div class="prod-icon">👟</div></div></div>
-          <div class="col-sm-6 col-md-4 col-lg-3"><div class="product-card"><div class="product-cat-label">PPE</div><div class="product-name">Hairnet</div><div class="prod-icon">🎀</div></div></div>
-          <div class="col-sm-6 col-md-4 col-lg-3"><div class="product-card"><div class="product-cat-label">PPE</div><div class="product-name">Eye Wear / Safety Glasses</div><div class="prod-icon">🥽</div></div></div>
-          <div class="col-sm-6 col-md-4 col-lg-3"><div class="product-card"><div class="product-cat-label">Cleaning</div><div class="product-name">Scientific Cleaning Products</div><div class="prod-icon">🧴</div></div></div>
+          <div class="col-sm-6 col-md-4 col-lg-3"><a href="nitrile-gloves.html" class="product-card"><div class="product-cat-label">PPE</div><div class="product-name">Nitrile Gloves</div><div class="prod-icon">🧤</div></a></div>
+          <div class="col-sm-6 col-md-4 col-lg-3"><a href="aprons-and-coverall-suits.html" class="product-card"><div class="product-cat-label">PPE</div><div class="product-name">Aprons &amp; Coverall Suits</div><div class="prod-icon">🥼</div></a></div>
+          <div class="col-sm-6 col-md-4 col-lg-3"><a href="shoe-covers.html" class="product-card"><div class="product-cat-label">PPE</div><div class="product-name">Shoe Covers</div><div class="prod-icon">👟</div></a></div>
+          <div class="col-sm-6 col-md-4 col-lg-3"><a href="hairnet.html" class="product-card"><div class="product-cat-label">PPE</div><div class="product-name">Hairnet</div><div class="prod-icon">🎀</div></a></div>
+          <div class="col-sm-6 col-md-4 col-lg-3"><a href="eye-wear-safety-glasses.html" class="product-card"><div class="product-cat-label">PPE</div><div class="product-name">Eye Wear / Safety Glasses</div><div class="prod-icon">🥽</div></a></div>
+          <div class="col-sm-6 col-md-4 col-lg-3"><a href="scientific-cleaning-products.html" class="product-card"><div class="product-cat-label">Cleaning</div><div class="product-name">Scientific Cleaning Products</div><div class="prod-icon">🧴</div></a></div>
         </div>
       </div>
       <div class="tab-pane fade" id="tab-building">
         <div class="row g-3">
-          <div class="col-sm-6 col-md-4 col-lg-3"><div class="product-card"><div class="product-cat-label">Flooring</div><div class="product-name">Marble / Tile / Ceramic / Wooden</div><div class="prod-icon">🪨</div></div></div>
-          <div class="col-sm-6 col-md-4 col-lg-3"><div class="product-card"><div class="product-cat-label">Hardware</div><div class="product-name">Architectural &amp; Luxury Hardware</div><div class="prod-icon">🔩</div></div></div>
-          <div class="col-sm-6 col-md-4 col-lg-3"><div class="product-card"><div class="product-cat-label">Bathroom</div><div class="product-name">Bathroom Fittings &amp; Sanitary Wares</div><div class="prod-icon">🚿</div></div></div>
-          <div class="col-sm-6 col-md-4 col-lg-3"><div class="product-card"><div class="product-cat-label">Furniture</div><div class="product-name">Hotel / Hospital / Office Furniture</div><div class="prod-icon">🛋️</div></div></div>
-          <div class="col-sm-6 col-md-4 col-lg-3"><div class="product-card"><div class="product-cat-label">Decor</div><div class="product-name">Artifacts / Paintings / Sculptures</div><div class="prod-icon">🖼️</div></div></div>
-          <div class="col-sm-6 col-md-4 col-lg-3"><div class="product-card"><div class="product-cat-label">Decor</div><div class="product-name">Curtains, Blinds &amp; Mirrors</div><div class="prod-icon">🪞</div></div></div>
-          <div class="col-sm-6 col-md-4 col-lg-3"><div class="product-card"><div class="product-cat-label">Decor</div><div class="product-name">Stainless Steel Decor</div><div class="prod-icon">✨</div></div></div>
-          <div class="col-sm-6 col-md-4 col-lg-3"><div class="product-card"><div class="product-cat-label">Outdoor</div><div class="product-name">Pergolas / Sunshade</div><div class="prod-icon">⛱️</div></div></div>
+          <div class="col-sm-6 col-md-4 col-lg-3"><a href="marble-tile-ceramic-wooden.html" class="product-card"><div class="product-cat-label">Flooring</div><div class="product-name">Marble / Tile / Ceramic / Wooden</div><div class="prod-icon">🪨</div></a></div>
+          <div class="col-sm-6 col-md-4 col-lg-3"><a href="architectural-and-luxury-hardware.html" class="product-card"><div class="product-cat-label">Hardware</div><div class="product-name">Architectural &amp; Luxury Hardware</div><div class="prod-icon">🔩</div></a></div>
+          <div class="col-sm-6 col-md-4 col-lg-3"><a href="bathroom-fittings-and-sanitary-wares.html" class="product-card"><div class="product-cat-label">Bathroom</div><div class="product-name">Bathroom Fittings &amp; Sanitary Wares</div><div class="prod-icon">🚿</div></a></div>
+          <div class="col-sm-6 col-md-4 col-lg-3"><a href="hotel-hospital-office-furniture.html" class="product-card"><div class="product-cat-label">Furniture</div><div class="product-name">Hotel / Hospital / Office Furniture</div><div class="prod-icon">🛋️</div></a></div>
+          <div class="col-sm-6 col-md-4 col-lg-3"><a href="artifacts-paintings-sculptures.html" class="product-card"><div class="product-cat-label">Decor</div><div class="product-name">Artifacts / Paintings / Sculptures</div><div class="prod-icon">🖼️</div></a></div>
+          <div class="col-sm-6 col-md-4 col-lg-3"><a href="curtains-blinds-and-mirrors.html" class="product-card"><div class="product-cat-label">Decor</div><div class="product-name">Curtains, Blinds &amp; Mirrors</div><div class="prod-icon">🪞</div></a></div>
+          <div class="col-sm-6 col-md-4 col-lg-3"><a href="stainless-steel-decor.html" class="product-card"><div class="product-cat-label">Decor</div><div class="product-name">Stainless Steel Decor</div><div class="prod-icon">✨</div></a></div>
+          <div class="col-sm-6 col-md-4 col-lg-3"><a href="pergolas-sunshade.html" class="product-card"><div class="product-cat-label">Outdoor</div><div class="product-name">Pergolas / Sunshade</div><div class="prod-icon">⛱️</div></a></div>
         </div>
       </div>
       <div class="tab-pane fade" id="tab-others">
         <div class="row g-3">
-          <div class="col-sm-6 col-md-4 col-lg-3"><div class="product-card"><div class="product-cat-label">Power</div><div class="product-name">Electrical Distribution Panel</div><div class="prod-icon">⚡</div></div></div>
-          <div class="col-sm-6 col-md-4 col-lg-3"><div class="product-card"><div class="product-cat-label">Power</div><div class="product-name">Power Generator Set</div><div class="prod-icon">🔋</div></div></div>
-          <div class="col-sm-6 col-md-4 col-lg-3"><div class="product-card"><div class="product-cat-label">Transport</div><div class="product-name">E-Bicycle</div><div class="prod-icon">🚲</div></div></div>
-          <div class="col-sm-6 col-md-4 col-lg-3"><div class="product-card"><div class="product-cat-label">Leisure</div><div class="product-name">Outdoor Spa / Jacuzzi</div><div class="prod-icon">🛁</div></div></div>
-          <div class="col-sm-6 col-md-4 col-lg-3"><div class="product-card"><div class="product-cat-label">Sports</div><div class="product-name">Sports Equipment</div><div class="prod-icon">⚽</div></div></div>
-          <div class="col-sm-6 col-md-4 col-lg-3"><div class="product-card"><div class="product-cat-label">Pool</div><div class="product-name">Swimming Pool Equipment &amp; Filters</div><div class="prod-icon">🏊</div></div></div>
-          <div class="col-sm-6 col-md-4 col-lg-3"><div class="product-card"><div class="product-cat-label">Entertainment</div><div class="product-name">Arcade Games &amp; Bowling Alley</div><div class="prod-icon">🎮</div></div></div>
-          <div class="col-sm-6 col-md-4 col-lg-3"><div class="product-card"><div class="product-cat-label">Handling</div><div class="product-name">Electric Pallet Stackers</div><div class="prod-icon">🏗️</div></div></div>
+          <div class="col-sm-6 col-md-4 col-lg-3"><a href="electrical-distribution-panel.html" class="product-card"><div class="product-cat-label">Power</div><div class="product-name">Electrical Distribution Panel</div><div class="prod-icon">⚡</div></a></div>
+          <div class="col-sm-6 col-md-4 col-lg-3"><a href="power-generator-set.html" class="product-card"><div class="product-cat-label">Power</div><div class="product-name">Power Generator Set</div><div class="prod-icon">🔋</div></a></div>
+          <div class="col-sm-6 col-md-4 col-lg-3"><a href="e-bicycle.html" class="product-card"><div class="product-cat-label">Transport</div><div class="product-name">E-Bicycle</div><div class="prod-icon">🚲</div></a></div>
+          <div class="col-sm-6 col-md-4 col-lg-3"><a href="outdoor-spa-jacuzzi.html" class="product-card"><div class="product-cat-label">Leisure</div><div class="product-name">Outdoor Spa / Jacuzzi</div><div class="prod-icon">🛁</div></a></div>
+          <div class="col-sm-6 col-md-4 col-lg-3"><a href="sports-equipment.html" class="product-card"><div class="product-cat-label">Sports</div><div class="product-name">Sports Equipment</div><div class="prod-icon">⚽</div></a></div>
+          <div class="col-sm-6 col-md-4 col-lg-3"><a href="swimming-pool-equipment-and-filters.html" class="product-card"><div class="product-cat-label">Pool</div><div class="product-name">Swimming Pool Equipment &amp; Filters</div><div class="prod-icon">🏊</div></a></div>
+          <div class="col-sm-6 col-md-4 col-lg-3"><a href="arcade-games-and-bowling-alley.html" class="product-card"><div class="product-cat-label">Entertainment</div><div class="product-name">Arcade Games &amp; Bowling Alley</div><div class="prod-icon">🎮</div></a></div>
+          <div class="col-sm-6 col-md-4 col-lg-3"><a href="electric-pallet-stackers.html" class="product-card"><div class="product-cat-label">Handling</div><div class="product-name">Electric Pallet Stackers</div><div class="prod-icon">🏗️</div></a></div>
         </div>
       </div>
     </div>

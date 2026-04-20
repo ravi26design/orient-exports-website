@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Swimming Pool Equipment & Filters — Orient Exports Limited</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;700;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<style>
+:root{--navy:#0d2140;--blue:#1a3a6b;--red:#c0202a;--red-light:#e63946;--gold:#d4a853;--off-white:#f5f7fa;--text:#1a2a3a;}
+body{font-family:'Barlow',sans-serif;color:var(--text);overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Barlow Condensed',sans-serif;font-weight:700;letter-spacing:-.5px}
+.section-label{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--red);display:inline-block;margin-bottom:14px}
+.section-title{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:clamp(2rem,4.5vw,3.5rem);line-height:1.05;margin-bottom:18px;color:var(--navy)}
+.section-sub{font-size:17px;line-height:1.6;color:#4a5a6a}
+section{padding:80px 0;position:relative}
+.navbar{padding:.9rem 0;background:rgba(13,33,64,.97);backdrop-filter:blur(12px);box-shadow:0 2px 30px rgba(0,0,0,.4)}
+.navbar .navbar-brand{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:22px;color:#fff;letter-spacing:2px;text-transform:uppercase;display:flex;align-items:center;gap:10px}
+.nav-logo-icon{width:38px;height:38px;background:var(--red);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:18px;color:#fff}
+.navbar .nav-link{color:rgba(255,255,255,.85)!important;font-size:13px;font-weight:500;letter-spacing:1px;text-transform:uppercase;margin:0 8px}
+.btn-brand{background:var(--red);color:#fff;border:none;padding:10px 22px;border-radius:2px;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase}
+.btn-brand:hover{background:var(--red-light);color:#fff}
+.btn-outline-brand{border:2px solid var(--navy);color:var(--navy);padding:10px 22px;border-radius:2px;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;background:transparent}
+.btn-outline-brand:hover{background:var(--navy);color:#fff}
+.page-hero{padding:140px 0 70px;background:linear-gradient(135deg,#0d2140 0%,#1a3a6b 60%,#c0202a 130%);color:#fff}
+.breadcrumb-wrap{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:22px}
+.breadcrumb-wrap a{color:rgba(255,255,255,.85);text-decoration:none}
+.breadcrumb-wrap a:hover{color:var(--gold)}
+.breadcrumb-wrap .sep{color:var(--red-light);margin:0 10px}
+.page-hero .cat{display:inline-block;background:var(--red);color:#fff;padding:6px 14px;border-radius:2px;font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:700;margin-bottom:18px}
+.page-hero h1{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(2.5rem,6vw,4.5rem);line-height:1;text-transform:uppercase;margin-bottom:20px}
+.page-hero .page-icon{font-size:84px;display:inline-block;margin-bottom:14px}
+.page-hero .lead-text{font-size:18px;line-height:1.6;color:rgba(255,255,255,.85);max-width:720px}
+.hero-meta{display:flex;flex-wrap:wrap;gap:30px;margin-top:36px;padding-top:26px;border-top:1px solid rgba(255,255,255,.15)}
+.hero-meta-item .meta-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+.hero-meta-item .meta-val{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:20px;color:#fff}
+#features{background:var(--off-white)}
+.feature-card{background:#fff;padding:30px 26px;border-radius:4px;height:100%;border:1px solid #e5e9f0;position:relative;transition:transform .3s,box-shadow .3s}
+.feature-card:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(0,0,0,.08)}
+.feature-num{position:absolute;top:14px;right:18px;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:48px;color:rgba(192,32,42,.1);line-height:1}
+.feature-icon{font-size:32px;display:block;margin-bottom:16px}
+.feature-name{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:21px;color:var(--navy);margin-bottom:10px}
+.feature-desc{font-size:14px;line-height:1.6;color:#6a7a8a}
+.product-card{display:block;background:#fff;padding:24px;border-radius:4px;border:1px solid #e5e9f0;transition:all .3s;height:100%;text-decoration:none;color:inherit}
+.product-card:hover{transform:translateY(-4px);border-color:var(--red);box-shadow:0 14px 30px rgba(0,0,0,.08)}
+.product-cat-label{display:inline-block;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--red);font-weight:700;margin-bottom:10px}
+.product-name{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:18px;color:var(--navy);line-height:1.2}
+.prod-icon{font-size:28px;margin-top:14px}
+#cta{background:var(--red);color:#fff;padding:70px 0;text-align:center}
+#cta h2{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(2rem,4.5vw,3.2rem);text-transform:uppercase;margin-bottom:18px;color:#fff}
+#cta p{font-size:17px;color:rgba(255,255,255,.9);max-width:620px;margin:0 auto 30px}
+.btn-cta-white{background:#fff;color:var(--red);padding:14px 30px;font-weight:700;letter-spacing:2px;text-transform:uppercase;border-radius:2px;font-size:13px;border:none}
+.btn-cta-white:hover{background:var(--navy);color:#fff}
+.btn-cta-outline{background:transparent;color:#fff;border:2px solid #fff;padding:12px 28px;font-weight:700;letter-spacing:2px;text-transform:uppercase;border-radius:2px;font-size:13px}
+.btn-cta-outline:hover{background:#fff;color:var(--red)}
+footer{background:#081629;color:#fff;padding:40px 0;text-align:center}
+.footer-brand{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:18px;letter-spacing:4px;margin-bottom:10px}
+.footer-copy{font-size:12px;color:rgba(255,255,255,.5);letter-spacing:1px}
+.footer-links{margin-top:16px}
+.footer-links a{color:rgba(255,255,255,.7);margin:0 14px;font-size:12px;letter-spacing:2px;text-transform:uppercase;text-decoration:none}
+.footer-links a:hover{color:var(--red-light)}
+.fade-in{opacity:0;transform:translateY(24px);transition:opacity .8s,transform .8s}
+.fade-in.visible{opacity:1;transform:none}
+</style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container-fluid px-4 px-lg-5">
+    <a class="navbar-brand" href="index.html"><span class="nav-logo-icon">O</span>Orient</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+      <ul class="navbar-nav align-items-lg-center">
+        <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#services">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#products">Products</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#pharma">Pharma</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#quality">Quality</a></li>
+        <li class="nav-item ms-lg-3"><a class="btn btn-brand" href="index.html#contact">Get a Quote</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb-wrap">
+      <a href="index.html">Home</a><span class="sep">/</span>
+      <a href="index.html#products">Products</a><span class="sep">/</span>
+      <span>Pool</span><span class="sep">/</span>
+      <span>Swimming Pool Equipment &amp; Filters</span>
+    </div>
+    <span class="page-icon">🏊</span>
+    <span class="cat">Pool</span>
+    <h1>Swimming Pool Equipment &amp; Filters</h1>
+    <p class="lead-text">Orient Exports sources swimming pool equipment & filters from verified Chinese manufacturers — delivered globally with full quality control, consolidation and logistics support. Tell us your specification and we'll match the right factory, grade and price.</p>
+    <div class="hero-meta">
+      <div class="hero-meta-item"><div class="meta-label">Category</div><div class="meta-val">Pool</div></div>
+      <div class="hero-meta-item"><div class="meta-label">Compliance</div><div class="meta-val">ISO · CE · FDA</div></div>
+      <div class="hero-meta-item"><div class="meta-label">Lead Time</div><div class="meta-val">30 – 60 Days</div></div>
+      <div class="hero-meta-item"><div class="meta-label">Origin</div><div class="meta-val">Guangzhou, China</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="features">
+  <div class="container">
+    <div class="row mb-5">
+      <div class="col-lg-7 fade-in">
+        <span class="section-label">What You Get</span>
+        <h2 class="section-title">Why Source This With Orient</h2>
+        <p class="section-sub">Every order is backed by factory auditing, independent QC, consolidated shipping, and after-sales support — so you get the right product at the right price, on time.</p>
+      </div>
+    </div>
+    <div class="row g-4 fade-in">
+      <div class="col-md-6 col-lg-4"><div class="feature-card"><div class="feature-num">01</div><span class="feature-icon">⚙️</span><div class="feature-name">Verified Manufacturers</div><p class="feature-desc">Sourced only from factories we have audited and qualified for quality and delivery reliability.</p></div></div><div class="col-md-6 col-lg-4"><div class="feature-card"><div class="feature-num">02</div><span class="feature-icon">🔍</span><div class="feature-name">Independent QC</div><p class="feature-desc">Pre-production, in-process and pre-shipment inspections conducted on every order.</p></div></div><div class="col-md-6 col-lg-4"><div class="feature-card"><div class="feature-num">03</div><span class="feature-icon">🚢</span><div class="feature-name">Consolidated Shipping</div><p class="feature-desc">Container consolidation and optimized logistics from Guangzhou to your destination port.</p></div></div><div class="col-md-6 col-lg-4"><div class="feature-card"><div class="feature-num">04</div><span class="feature-icon">📄</span><div class="feature-name">Full Documentation</div><p class="feature-desc">Commercial invoice, packing list, BL, certificate of origin, and compliance docs provided.</p></div></div><div class="col-md-6 col-lg-4"><div class="feature-card"><div class="feature-num">05</div><span class="feature-icon">🛠️</span><div class="feature-name">After-Sales Support</div><p class="feature-desc">Installation guidance, spare parts coordination and warranty claim handling.</p></div></div><div class="col-md-6 col-lg-4"><div class="feature-card"><div class="feature-num">06</div><span class="feature-icon">💰</span><div class="feature-name">Transparent Pricing</div><p class="feature-desc">FOB, CFR or DDP pricing with line-item breakdowns — no hidden margins.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="row mb-5">
+      <div class="col-lg-7 fade-in">
+        <span class="section-label">You May Also Need</span>
+        <h2 class="section-title">Related Products</h2>
+      </div>
+    </div>
+    <div class="row g-3 fade-in">
+      <div class="col-sm-6 col-md-4 col-lg-3"><a href="arcade-games-and-bowling-alley.html" class="product-card"><div class="product-cat-label">Entertainment</div><div class="product-name">Arcade Games &amp; Bowling Alley</div><div class="prod-icon">🎮</div></a></div><div class="col-sm-6 col-md-4 col-lg-3"><a href="electric-pallet-stackers.html" class="product-card"><div class="product-cat-label">Handling</div><div class="product-name">Electric Pallet Stackers</div><div class="prod-icon">🏗️</div></a></div><div class="col-sm-6 col-md-4 col-lg-3"><a href="pharma-production-line-equipment.html" class="product-card"><div class="product-cat-label">Equipment</div><div class="product-name">Pharma Production Line Equipment</div><div class="prod-icon">🏭</div></a></div><div class="col-sm-6 col-md-4 col-lg-3"><a href="packaging-line-equipment.html" class="product-card"><div class="product-cat-label">Equipment</div><div class="product-name">Packaging Line Equipment</div><div class="prod-icon">📦</div></a></div>
+    </div>
+  </div>
+</section>
+
+<section id="cta">
+  <div class="container">
+    <h2>Get a Quote on Swimming Pool Equipment &amp; Filters</h2>
+    <p>Tell us your volume, specification and destination port. We'll shortlist verified suppliers and send you quotations within 48 hours.</p>
+    <div class="d-flex justify-content-center gap-3 flex-wrap">
+      <a href="index.html#contact" class="btn btn-cta-white">Request a Quote</a>
+      <a href="index.html#services" class="btn btn-cta-outline">See Our Process</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-brand">⊕ ORIENT EXPORTS LIMITED</div>
+    <div class="footer-copy">© 2025 Orient Exports Limited · Guangzhou, China · Australia / China / Canada / India / USA</div>
+    <div class="footer-links">
+      <a href="index.html#about">About</a><a href="index.html#services">Services</a><a href="index.html#products">Products</a><a href="index.html#contact">Contact</a>
+    </div>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting&&e.target.classList.add('visible')),{threshold:.1});
+document.querySelectorAll('.fade-in').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
