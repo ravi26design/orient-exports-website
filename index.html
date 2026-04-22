@@ -33,9 +33,20 @@ section{padding:100px 0;position:relative}
 .btn-outline-brand:hover{background:#fff;color:var(--navy)}
 
 /* HERO */
-#hero{height:100vh;min-height:700px;padding:0;color:#fff;overflow:hidden;display:flex;align-items:center;background:
-  linear-gradient(135deg,rgba(13,33,64,.85) 0%,rgba(26,58,107,.6) 50%,rgba(192,32,42,.55) 100%),
-  url('img/img_0_clean.jpeg') center/cover}
+#hero{height:100vh;min-height:700px;padding:0;color:#fff;overflow:hidden;position:relative}
+#heroCarousel,#heroCarousel .carousel-inner,#heroCarousel .carousel-item{height:100%}
+#heroCarousel .carousel-item{background-size:cover;background-position:center}
+#heroCarousel .carousel-item:nth-child(1){background-image:url('img/office_1.jpeg')}
+#heroCarousel .carousel-item:nth-child(2){background-image:url('img/office_2.jpeg')}
+#heroCarousel .carousel-item:nth-child(3){background-image:url('img/office_3.jpeg')}
+#heroCarousel .carousel-item:nth-child(4){background-image:url('img/office_4.jpeg')}
+#heroCarousel .carousel-item:nth-child(5){background-image:url('img/office_5.jpeg')}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(13,33,64,.85) 0%,rgba(26,58,107,.6) 50%,rgba(192,32,42,.55) 100%);z-index:2;pointer-events:none}
+.hero-content-wrap{position:absolute;inset:0;z-index:3;display:flex;align-items:center;pointer-events:none}
+.hero-content-wrap .container>*{pointer-events:auto}
+#heroCarousel .carousel-indicators{z-index:4;bottom:30px}
+#heroCarousel .carousel-indicators button{width:40px;height:3px;background:rgba(255,255,255,.4);border:none}
+#heroCarousel .carousel-indicators .active{background:var(--red)}
 .hero-badge{display:inline-block;padding:8px 20px;border:1px solid rgba(255,255,255,.3);border-radius:40px;font-size:12px;letter-spacing:2px;text-transform:uppercase;margin-bottom:26px;backdrop-filter:blur(10px)}
 .hero-title{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(3rem,7vw,6rem);line-height:.95;text-transform:uppercase;margin-bottom:24px}
 .hero-title .accent{color:var(--red-light)}
@@ -200,6 +211,8 @@ footer{background:#081629;color:#fff;padding:40px 0;text-align:center}
         <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
         <li class="nav-item"><a class="nav-link" href="#pharma">Pharma</a></li>
         <li class="nav-item"><a class="nav-link" href="#quality">Quality</a></li>
+        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
         <li class="nav-item ms-lg-3"><a class="btn btn-brand" href="#contact">Get a Quote</a></li>
       </ul>
     </div>
@@ -208,15 +221,34 @@ footer{background:#081629;color:#fff;padding:40px 0;text-align:center}
 
 <!-- HERO -->
 <section id="hero">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-9">
-        <span class="hero-badge">Guangzhou, China → Global</span>
-        <h1 class="hero-title">Where China<br/>Meets the <span class="accent">World.</span><br/>Reliably.</h1>
-        <p class="hero-sub">We help importers, brands and distributors source high-quality products from China — with verified suppliers, strict quality control and end-to-end logistics support.</p>
-        <div class="d-flex flex-wrap gap-3">
-          <a href="#contact" class="btn btn-brand">Get a Sourcing Quote</a>
-          <a href="#services" class="btn btn-outline-brand">How It Works</a>
+  <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4500">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3"></button>
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="4"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active"></div>
+      <div class="carousel-item"></div>
+      <div class="carousel-item"></div>
+      <div class="carousel-item"></div>
+      <div class="carousel-item"></div>
+    </div>
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content-wrap">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-9">
+          <span class="hero-badge">Guangzhou, China → Global</span>
+          <h1 class="hero-title">Where China<br/>Meets the <span class="accent">World.</span><br/>Reliably.</h1>
+          <p class="hero-sub">We help importers, brands and distributors source high-quality products from China — with verified suppliers, strict quality control and end-to-end logistics support.</p>
+          <div class="d-flex flex-wrap gap-3">
+            <a href="#contact" class="btn btn-brand">Get a Sourcing Quote</a>
+            <a href="#services" class="btn btn-outline-brand">How It Works</a>
+          </div>
         </div>
       </div>
     </div>
@@ -562,7 +594,7 @@ footer{background:#081629;color:#fff;padding:40px 0;text-align:center}
     <div class="footer-brand">⊕ ORIENT EXPORTS LIMITED</div>
     <div class="footer-copy">© 2025 Orient Exports Limited · Guangzhou, China · Australia / China / Canada / India / USA</div>
     <div class="footer-links">
-      <a href="#about">About</a><a href="#services">Services</a><a href="#products">Products</a><a href="#contact">Contact</a>
+      <a href="#about">About</a><a href="#services">Services</a><a href="#products">Products</a><a href="blog.html">Blog</a><a href="faq.html">FAQ</a><a href="#contact">Contact</a>
     </div>
   </div>
 </footer>
