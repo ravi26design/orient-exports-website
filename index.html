@@ -491,7 +491,7 @@ footer{background:#081629;color:#fff;padding:40px 0;text-align:center}
       <p class="section-sub">A look at the dedicated manufacturing partner behind our pharmaceutical, cleanroom and healthcare facility projects — engineering excellence end-to-end.</p>
     </div>
     <div class="video-shell fade-in">
-      <video controls preload="metadata" playsinline poster="img/img_5.jpeg">
+      <video id="tfkVideo" controls muted playsinline preload="metadata" loop poster="img/img_5.jpeg">
         <source src="video/orient-tfk-partner.mp4" type="video/mp4"/>
         Your browser doesn't support embedded video.
       </video>
@@ -571,6 +571,18 @@ let cur=1;const cards=document.querySelectorAll('.step-card');
 function act(n){cards.forEach(c=>{const s=+c.dataset.step;c.classList.toggle('active',s===n);c.classList.toggle('completed',s<n)});cur=n}
 act(1);cards.forEach(c=>c.addEventListener('click',()=>act(+c.dataset.step)));
 setInterval(()=>act(cur<8?cur+1:1),3000);
+
+// Autoplay video on scroll into viewport
+const tfkVid=document.getElementById('tfkVideo');
+if(tfkVid){
+  const vio=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){tfkVid.play().catch(()=>{})}
+      else{tfkVid.pause()}
+    });
+  },{threshold:.45});
+  vio.observe(tfkVid);
+}
 </script>
 </body>
 </html>
