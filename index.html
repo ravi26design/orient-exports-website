@@ -312,17 +312,28 @@ footer{background:#081629;color:#fff;padding:40px 0;text-align:center}
 
 <!-- PRODUCTS -->
 <style>
-.cat-card{display:block;text-decoration:none;color:inherit;position:relative;overflow:hidden;border-radius:8px;height:280px;transition:transform .35s, box-shadow .35s}
-.cat-card:hover{transform:translateY(-6px);box-shadow:0 24px 50px rgba(13,33,64,.18)}
-.cat-card-bg{position:absolute;inset:0;background-size:cover;background-position:center;transition:transform .6s}
-.cat-card:hover .cat-card-bg{transform:scale(1.08)}
-.cat-card-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,33,64,.2) 0%,rgba(13,33,64,.92) 100%);transition:background .35s}
-.cat-card:hover .cat-card-overlay{background:linear-gradient(180deg,rgba(192,32,42,.3) 0%,rgba(13,33,64,.95) 100%)}
+.cat-card{display:block;text-decoration:none;color:inherit;position:relative;overflow:hidden;border-radius:10px;height:300px;transition:transform .35s, box-shadow .35s}
+.cat-card:hover{transform:translateY(-6px);box-shadow:0 28px 55px rgba(13,33,64,.22)}
+.cat-card-bg{position:absolute;inset:0;transition:transform .6s}
+.cat-card:hover .cat-card-bg{transform:scale(1.04)}
+.cat-card-watermark{position:absolute;font-size:240px;line-height:1;opacity:.18;right:-30px;top:-20px;transform:rotate(-12deg);transition:transform .6s,opacity .35s}
+.cat-card:hover .cat-card-watermark{transform:rotate(-8deg) scale(1.1);opacity:.28}
+.cat-card-pattern{position:absolute;inset:0;background-image:radial-gradient(circle at 20% 30%,rgba(255,255,255,.08) 0%,transparent 35%),radial-gradient(circle at 80% 70%,rgba(255,255,255,.06) 0%,transparent 40%)}
 .cat-card-content{position:absolute;bottom:0;left:0;right:0;padding:26px 24px;color:#fff;z-index:2}
-.cat-card-num{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:14px;letter-spacing:3px;color:var(--gold);margin-bottom:8px;display:block}
-.cat-card-name{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:24px;text-transform:uppercase;line-height:1.1;letter-spacing:.5px;margin-bottom:12px}
-.cat-card-arrow{display:inline-flex;align-items:center;gap:6px;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;font-weight:700;color:rgba(255,255,255,.85);transition:gap .25s,color .25s}
-.cat-card:hover .cat-card-arrow{gap:14px;color:#fff}
+.cat-card-num{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:13px;letter-spacing:3px;color:var(--gold);margin-bottom:10px;display:block}
+.cat-card-name{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:26px;text-transform:uppercase;line-height:1.05;letter-spacing:.5px;margin-bottom:14px;color:#fff}
+.cat-card-meta{font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.7);margin-bottom:14px}
+.cat-card-arrow{display:inline-flex;align-items:center;gap:6px;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;font-weight:700;color:#fff;transition:gap .25s}
+.cat-card:hover .cat-card-arrow{gap:14px}
+.cat-card-arrow .arrow-circle{width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,.15);display:inline-flex;align-items:center;justify-content:center;backdrop-filter:blur(10px);transition:background .25s}
+.cat-card:hover .arrow-circle{background:var(--red)}
+/* Theme variants */
+.cat-pharma{background:linear-gradient(135deg,#0d2140 0%,#1a3a6b 50%,#c0202a 130%)}
+.cat-api{background:linear-gradient(135deg,#1e5799 0%,#2d3e84 60%,#5b2280 120%)}
+.cat-facility{background:linear-gradient(135deg,#0d2140 0%,#1a3a6b 50%,#0a8a8a 130%)}
+.cat-supplies{background:linear-gradient(135deg,#a01a23 0%,#c0202a 50%,#d4a853 130%)}
+.cat-building{background:linear-gradient(135deg,#0d2140 0%,#3a3f5c 60%,#7d4a17 130%)}
+.cat-others{background:linear-gradient(135deg,#0d2140 0%,#1a3a6b 60%,#2d6e3a 130%)}
 .cat-cta-row{margin-top:50px;text-align:center}
 .cat-cta-row .btn{padding:14px 32px;font-size:13px;letter-spacing:2px}
 </style>
@@ -334,58 +345,64 @@ footer{background:#081629;color:#fff;padding:40px 0;text-align:center}
       <p class="section-sub">Six categories. Verified suppliers. End-to-end sourcing — from spec to shelf.</p>
     </div>
     <div class="row g-4 fade-in">
-      <div class="col-md-6 col-lg-4"><a href="products.html#tab-pharma-eq" class="cat-card">
-        <div class="cat-card-bg" style="background-image:url('img/img_5.jpeg')"></div>
-        <div class="cat-card-overlay"></div>
+      <div class="col-md-6 col-lg-4"><a href="products.html#tab-pharma-eq" class="cat-card cat-pharma">
+        <div class="cat-card-pattern"></div>
+        <div class="cat-card-watermark">💊</div>
         <div class="cat-card-content">
           <span class="cat-card-num">Category 01</span>
           <div class="cat-card-name">Pharma &amp; Cleanroom</div>
-          <span class="cat-card-arrow">Explore →</span>
+          <div class="cat-card-meta">Equipment · Furniture · Vault</div>
+          <span class="cat-card-arrow"><span class="arrow-circle">→</span> Explore</span>
         </div>
       </a></div>
-      <div class="col-md-6 col-lg-4"><a href="products.html#tab-api" class="cat-card">
-        <div class="cat-card-bg" style="background-image:url('img/img_4.jpeg')"></div>
-        <div class="cat-card-overlay"></div>
+      <div class="col-md-6 col-lg-4"><a href="products.html#tab-api" class="cat-card cat-api">
+        <div class="cat-card-pattern"></div>
+        <div class="cat-card-watermark">🧪</div>
         <div class="cat-card-content">
           <span class="cat-card-num">Category 02</span>
           <div class="cat-card-name">Active Pharma Ingredients</div>
-          <span class="cat-card-arrow">Explore →</span>
+          <div class="cat-card-meta">APIs · Excipients · GMP-grade</div>
+          <span class="cat-card-arrow"><span class="arrow-circle">→</span> Explore</span>
         </div>
       </a></div>
-      <div class="col-md-6 col-lg-4"><a href="products.html#tab-facility" class="cat-card">
-        <div class="cat-card-bg" style="background-image:url('img/office_2.jpeg')"></div>
-        <div class="cat-card-overlay"></div>
+      <div class="col-md-6 col-lg-4"><a href="products.html#tab-facility" class="cat-card cat-facility">
+        <div class="cat-card-pattern"></div>
+        <div class="cat-card-watermark">🏗️</div>
         <div class="cat-card-content">
           <span class="cat-card-num">Category 03</span>
           <div class="cat-card-name">Facility Materials</div>
-          <span class="cat-card-arrow">Explore →</span>
+          <div class="cat-card-meta">Panels · HVAC · Lighting · Power</div>
+          <span class="cat-card-arrow"><span class="arrow-circle">→</span> Explore</span>
         </div>
       </a></div>
-      <div class="col-md-6 col-lg-4"><a href="products.html#tab-consumables" class="cat-card">
-        <div class="cat-card-bg" style="background-image:url('img/office_4.jpeg')"></div>
-        <div class="cat-card-overlay"></div>
+      <div class="col-md-6 col-lg-4"><a href="products.html#tab-consumables" class="cat-card cat-supplies">
+        <div class="cat-card-pattern"></div>
+        <div class="cat-card-watermark">🧤</div>
         <div class="cat-card-content">
           <span class="cat-card-num">Category 04</span>
           <div class="cat-card-name">Operating Supplies</div>
-          <span class="cat-card-arrow">Explore →</span>
+          <div class="cat-card-meta">PPE · Cleaning · Disposables</div>
+          <span class="cat-card-arrow"><span class="arrow-circle">→</span> Explore</span>
         </div>
       </a></div>
-      <div class="col-md-6 col-lg-4"><a href="products.html#tab-building" class="cat-card">
-        <div class="cat-card-bg" style="background-image:url('img/office_1.jpeg')"></div>
-        <div class="cat-card-overlay"></div>
+      <div class="col-md-6 col-lg-4"><a href="products.html#tab-building" class="cat-card cat-building">
+        <div class="cat-card-pattern"></div>
+        <div class="cat-card-watermark">🛋️</div>
         <div class="cat-card-content">
           <span class="cat-card-num">Category 05</span>
           <div class="cat-card-name">Building &amp; Decor</div>
-          <span class="cat-card-arrow">Explore →</span>
+          <div class="cat-card-meta">Marble · Furniture · Hardware</div>
+          <span class="cat-card-arrow"><span class="arrow-circle">→</span> Explore</span>
         </div>
       </a></div>
-      <div class="col-md-6 col-lg-4"><a href="products.html#tab-others" class="cat-card">
-        <div class="cat-card-bg" style="background-image:url('img/office_5.jpeg')"></div>
-        <div class="cat-card-overlay"></div>
+      <div class="col-md-6 col-lg-4"><a href="products.html#tab-others" class="cat-card cat-others">
+        <div class="cat-card-pattern"></div>
+        <div class="cat-card-watermark">⚡</div>
         <div class="cat-card-content">
           <span class="cat-card-num">Category 06</span>
           <div class="cat-card-name">Others</div>
-          <span class="cat-card-arrow">Explore →</span>
+          <div class="cat-card-meta">Power · Sports · Pool · Leisure</div>
+          <span class="cat-card-arrow"><span class="arrow-circle">→</span> Explore</span>
         </div>
       </a></div>
     </div>
