@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>The Canton Fair, Demystified: A First-Timer's Playbook — Orient Exports Limited</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;700;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<style>
+:root{--navy:#0d2140;--blue:#1a3a6b;--red:#c0202a;--red-light:#e63946;--gold:#d4a853;--off-white:#f5f7fa;--text:#1a2a3a;}
+body{font-family:'Barlow',sans-serif;color:var(--text);overflow-x:hidden;line-height:1.65}
+h1,h2,h3,h4{font-family:'Barlow Condensed',sans-serif;font-weight:700;letter-spacing:-.5px;color:var(--navy)}
+.navbar{padding:.9rem 0;background:rgba(13,33,64,.97);backdrop-filter:blur(12px);box-shadow:0 2px 30px rgba(0,0,0,.4)}
+.navbar .navbar-brand{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:22px;color:#fff;letter-spacing:2px;text-transform:uppercase;display:flex;align-items:center;gap:10px}
+.nav-logo-icon{width:38px;height:38px;background:var(--red);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:18px;color:#fff}
+.navbar .nav-link{color:rgba(255,255,255,.85)!important;font-size:13px;font-weight:500;letter-spacing:1px;text-transform:uppercase;margin:0 8px}
+.btn-brand{background:var(--red);color:#fff;border:none;padding:10px 22px;border-radius:2px;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase}
+.btn-brand:hover{background:var(--red-light);color:#fff}
+.post-hero{padding:140px 0 70px;background:linear-gradient(135deg,#0d2140 0%,#1a3a6b 60%,#c0202a 130%),url('img/office_5.jpeg') center/cover;background-blend-mode:overlay;color:#fff;position:relative}
+.post-hero::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,33,64,.6) 0%,rgba(13,33,64,.85) 100%)}
+.post-hero-inner{position:relative;z-index:2}
+.breadcrumb-wrap{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:22px}
+.breadcrumb-wrap a{color:rgba(255,255,255,.85);text-decoration:none}
+.breadcrumb-wrap a:hover{color:var(--gold)}
+.breadcrumb-wrap .sep{color:var(--red-light);margin:0 10px}
+.post-cat{display:inline-block;background:var(--red);color:#fff;padding:6px 14px;border-radius:2px;font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:700;margin-bottom:18px}
+.post-hero h1{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(2rem,5vw,3.6rem);line-height:1.05;text-transform:uppercase;margin-bottom:20px;color:#fff;max-width:900px}
+.post-meta{font-size:13px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.7)}
+.post-body{padding:70px 0;background:#fff}
+.post-body .container{max-width:780px}
+.post-body .lede{font-size:21px;line-height:1.55;color:var(--navy);font-weight:500;border-left:3px solid var(--red);padding-left:22px;margin-bottom:36px}
+.post-body h3{font-size:26px;margin-top:38px;margin-bottom:14px;color:var(--navy)}
+.post-body p{font-size:17px;color:#3a4a5a;margin-bottom:18px}
+.post-cta{background:var(--off-white);padding:50px 36px;border-radius:6px;margin-top:50px;border-left:4px solid var(--red);text-align:left}
+.post-cta h4{font-size:24px;color:var(--navy);margin-bottom:10px;text-transform:uppercase;letter-spacing:.5px}
+.post-cta p{font-size:15px;color:#4a5a6a;margin-bottom:18px}
+.related{padding:70px 0;background:var(--off-white)}
+.related .section-label{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--red);display:inline-block;margin-bottom:14px}
+.related h2{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:36px;color:var(--navy);margin-bottom:36px}
+.blog-card{display:block;text-decoration:none;color:inherit;background:#fff;border:1px solid #e5e9f0;border-radius:6px;overflow:hidden;height:100%;transition:transform .3s,box-shadow .3s}
+.blog-card:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(0,0,0,.08)}
+.blog-thumb{height:170px;background-size:cover;background-position:center;position:relative}
+.blog-cat{position:absolute;top:14px;left:14px;background:var(--red);color:#fff;padding:5px 12px;font-size:10px;letter-spacing:2px;text-transform:uppercase;font-weight:700;border-radius:2px}
+.blog-body{padding:22px}
+.blog-meta{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:#8899aa;margin-bottom:8px}
+.blog-title{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:19px;color:var(--navy);line-height:1.2;margin-bottom:8px}
+.blog-read{display:inline-block;margin-top:10px;color:var(--red);font-size:12px;letter-spacing:1.5px;text-transform:uppercase;font-weight:700}
+footer{background:#081629;color:#fff;padding:40px 0;text-align:center}
+.footer-brand{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:18px;letter-spacing:4px;margin-bottom:10px}
+.footer-copy{font-size:12px;color:rgba(255,255,255,.5);letter-spacing:1px}
+.footer-links{margin-top:16px}
+.footer-links a{color:rgba(255,255,255,.7);margin:0 14px;font-size:12px;letter-spacing:2px;text-transform:uppercase;text-decoration:none}
+.footer-links a:hover{color:var(--red-light)}
+</style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container-fluid px-4 px-lg-5">
+    <a class="navbar-brand" href="index.html"><span class="nav-logo-icon">O</span>Orient</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+      <ul class="navbar-nav align-items-lg-center">
+        <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#services">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#products">Products</a></li>
+        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+        <li class="nav-item ms-lg-3"><a class="btn btn-brand" href="index.html#contact">Get a Quote</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section class="post-hero">
+  <div class="container post-hero-inner">
+    <div class="breadcrumb-wrap">
+      <a href="index.html">Home</a><span class="sep">/</span>
+      <a href="blog.html">Blog</a><span class="sep">/</span>
+      <span>Market</span>
+    </div>
+    <span class="post-cat">Market</span>
+    <h1>The Canton Fair, Demystified: A First-Timer's Playbook</h1>
+    <div class="post-meta">Mar 10, 2026 · 4 min read</div>
+  </div>
+</section>
+
+<section class="post-body">
+  <div class="container">
+    <p class="lede">Three phases, 40+ halls and 25,000 exhibitors. How to prep, what to bring, and how we help clients walk it efficiently.</p>
+    <h3>Pick the Right Phase</h3>
+<p>Phase 1 (Apr/Oct): Electronics, machinery, building materials. Phase 2: Consumer goods, decoration. Phase 3: Textiles, food, medical. Choose based on your category — don't spread thin.</p>
+<h3>Pre-Register Online</h3>
+<p>Skip the on-site queue. Buyer card costs roughly RMB 100. Bring two passport-size photos and your business card.</p>
+<h3>Plan Your Halls Day-by-Day</h3>
+<p>Each phase covers 3.4 million sqm. Walking randomly burns days. Pre-mark 30–50 booths from the online directory before you arrive.</p>
+<h3>Bring Real Specifications</h3>
+<p>Vague enquiries get vague quotes. Bring drawings, target specs, target volumes and target FOB price ranges. Suppliers respect prepared buyers.</p>
+<h3>Schedule Factory Visits Smart</h3>
+<p>Most exhibitors offer factory tours for serious buyers. Cluster visits geographically — Foshan factories together, Dongguan together, etc.</p>
+<h3>After the Fair</h3>
+<p>Within one week, send formal RFQs to your top 5 suppliers per category. Most leads go cold by week three. We handle this follow-up for clients in real time.</p>
+
+    <div class="post-cta">
+      <h4>Need help putting this into practice?</h4>
+      <p>We do this for our clients every day — from supplier audits to consolidation to compliance. Talk to our Guangzhou team about your project.</p>
+      <a href="index.html#contact" class="btn btn-brand">Talk To Us</a>
+    </div>
+  </div>
+</section>
+
+<section class="related">
+  <div class="container">
+    <span class="section-label">Keep Reading</span>
+    <h2>Related Articles</h2>
+    <div class="row g-4">
+      <div class="col-md-4"><a href="how-to-audit-chinese-manufacturer.html" class="blog-card"><div class="blog-thumb" style="background-image:linear-gradient(135deg,rgba(13,33,64,.55),rgba(192,32,42,.55)),url('img/office_1.jpeg')"><span class="blog-cat">Sourcing</span></div><div class="blog-body"><div class="blog-meta">Apr 15, 2026 · 6 min read</div><div class="blog-title">How to Audit a Chinese Manufacturer Before Placing Your First Order</div><span class="blog-read">Read article →</span></div></a></div><div class="col-md-4"><a href="gmp-cleanroom-setup-supplier.html" class="blog-card"><div class="blog-thumb" style="background-image:linear-gradient(135deg,rgba(13,33,64,.55),rgba(192,32,42,.55)),url('img/img_5.jpeg')"><span class="blog-cat">Pharma</span></div><div class="blog-body"><div class="blog-meta">Apr 08, 2026 · 8 min read</div><div class="blog-title">GMP Cleanroom Setup: What You Actually Need From Your Supplier</div><span class="blog-read">Read article →</span></div></a></div><div class="col-md-4"><a href="consolidation-101-container-costs.html" class="blog-card"><div class="blog-thumb" style="background-image:linear-gradient(135deg,rgba(13,33,64,.55),rgba(192,32,42,.55)),url('img/img_1.jpeg')"><span class="blog-cat">Logistics</span></div><div class="blog-body"><div class="blog-meta">Apr 02, 2026 · 5 min read</div><div class="blog-title">Consolidation 101: How to Cut 18% Off Your Container Costs</div><span class="blog-read">Read article →</span></div></a></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-brand">⊕ ORIENT EXPORTS LIMITED</div>
+    <div class="footer-copy">© 2025 Orient Exports Limited · Guangzhou, China · Australia / China / Canada / India / USA</div>
+    <div class="footer-links">
+      <a href="index.html#about">About</a><a href="index.html#services">Services</a><a href="index.html#products">Products</a><a href="blog.html">Blog</a><a href="faq.html">FAQ</a><a href="index.html#contact">Contact</a>
+    </div>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
