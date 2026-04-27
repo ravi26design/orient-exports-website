@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Services — Orient Exports Limited</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;700;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<style>
+
+:root{
+  --navy:#0d2140;--blue:#1a3a6b;--mid-blue:#1e5799;--red:#c0202a;--red-light:#e63946;
+  --gold:#d4a853;--white:#fff;--off-white:#f5f7fa;--gray:#8899aa;--text:#1a2a3a;
+  --bs-primary:#c0202a;
+}
+body{font-family:'Barlow',sans-serif;color:var(--text);overflow-x:hidden}
+h1,h2,h3,h4,.display-1,.display-2,.display-3,.display-4,.display-5{font-family:'Barlow Condensed',sans-serif;font-weight:700;letter-spacing:-.5px}
+.section-label{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--red);display:inline-block;margin-bottom:14px}
+.section-title{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:clamp(2rem,4.5vw,3.5rem);line-height:1.05;margin-bottom:18px;color:var(--navy)}
+.section-sub{font-size:17px;line-height:1.6;color:#4a5a6a}
+section{padding:100px 0;position:relative}
+
+/* NAV */
+.navbar{transition:background .3s, box-shadow .3s;padding:.9rem 0}
+.navbar-dark-custom{background:transparent}
+.navbar.scrolled{background:rgba(13,33,64,.97)!important;backdrop-filter:blur(12px);box-shadow:0 2px 30px rgba(0,0,0,.4)}
+.navbar .navbar-brand{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:22px;color:#fff;letter-spacing:2px;text-transform:uppercase;display:flex;align-items:center;gap:10px}
+.nav-logo-icon{width:38px;height:38px;background:var(--red);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:18px;color:#fff}
+.navbar .nav-link{color:rgba(255,255,255,.85)!important;font-size:13px;font-weight:500;letter-spacing:1px;text-transform:uppercase;margin:0 8px;position:relative}
+.navbar .nav-link:hover{color:#fff!important}
+.btn-brand{background:var(--red);color:#fff;border:none;padding:10px 22px;border-radius:2px;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase}
+.btn-brand:hover{background:var(--red-light);color:#fff}
+.btn-outline-brand{border:2px solid #fff;color:#fff;padding:10px 22px;border-radius:2px;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase}
+.btn-outline-brand:hover{background:#fff;color:var(--navy)}
+
+/* HERO */
+#hero{height:100vh;min-height:700px;padding:0;color:#fff;overflow:hidden;position:relative}
+#heroCarousel,#heroCarousel .carousel-inner,#heroCarousel .carousel-item{height:100%}
+#heroCarousel .carousel-item{background-size:cover;background-position:center}
+#heroCarousel .carousel-item:nth-child(1){background-image:url('img/office_1.jpeg')}
+#heroCarousel .carousel-item:nth-child(2){background-image:url('img/office_2.jpeg')}
+#heroCarousel .carousel-item:nth-child(3){background-image:url('img/office_3.jpeg')}
+#heroCarousel .carousel-item:nth-child(4){background-image:url('img/office_4.jpeg')}
+#heroCarousel .carousel-item:nth-child(5){background-image:url('img/office_5.jpeg')}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(13,33,64,.85) 0%,rgba(26,58,107,.6) 50%,rgba(192,32,42,.55) 100%);z-index:2;pointer-events:none}
+.hero-content-wrap{position:absolute;inset:0;z-index:3;display:flex;align-items:center;pointer-events:none}
+.hero-content-wrap .container>*{pointer-events:auto}
+#heroCarousel .carousel-indicators{z-index:4;bottom:30px}
+#heroCarousel .carousel-indicators button{width:40px;height:3px;background:rgba(255,255,255,.4);border:none}
+#heroCarousel .carousel-indicators .active{background:var(--red)}
+.hero-badge{display:inline-block;padding:8px 20px;border:1px solid rgba(255,255,255,.3);border-radius:40px;font-size:12px;letter-spacing:2px;text-transform:uppercase;margin-bottom:26px;backdrop-filter:blur(10px)}
+.hero-title{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(3rem,7vw,6rem);line-height:.95;text-transform:uppercase;margin-bottom:24px}
+.hero-title .accent{color:var(--red-light)}
+.hero-sub{font-size:18px;line-height:1.6;max-width:600px;color:rgba(255,255,255,.85);margin-bottom:36px}
+
+/* TICKER */
+.ticker{background:var(--navy);color:#fff;padding:18px 0;overflow:hidden;white-space:nowrap}
+.ticker-inner{display:inline-block;animation:ticker 40s linear infinite}
+.ticker span{display:inline-block;padding:0 40px;font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:14px;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.7)}
+.ticker span:nth-child(even){color:var(--red-light)}
+@keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ABOUT */
+#about{background:var(--off-white)}
+.about-img-wrap{position:relative}
+.about-img-main{width:100%;border-radius:4px;box-shadow:0 20px 60px rgba(0,0,0,.15)}
+.about-img-accent{position:absolute;bottom:-40px;right:-40px;width:55%;border:6px solid #fff;border-radius:4px;box-shadow:0 20px 60px rgba(0,0,0,.2)}
+.about-tag{position:absolute;top:-20px;left:-20px;background:var(--red);color:#fff;padding:22px 26px;border-radius:4px;text-align:center}
+.about-tag-num{display:block;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:42px;line-height:1}
+.about-tag-txt{display:block;font-size:11px;letter-spacing:2px;text-transform:uppercase;margin-top:4px}
+.sector-card{background:#fff;padding:18px 20px;border-radius:3px;display:flex;align-items:center;gap:14px;border-left:3px solid var(--red);box-shadow:0 4px 20px rgba(0,0,0,.05);transition:transform .2s}
+.sector-card:hover{transform:translateX(6px)}
+.sector-icon{font-size:26px}
+.sector-name{font-weight:600;font-size:15px;color:var(--navy)}
+
+/* MISSION */
+#mission{background:var(--navy);color:#fff}
+#mission .section-label{color:var(--gold)}
+#mission .section-title{color:#fff}
+.mv-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);padding:44px 36px;border-radius:4px;height:100%;backdrop-filter:blur(10px)}
+.mv-icon{font-size:36px;margin-bottom:18px}
+.mv-label{font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+.mv-title{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:42px;margin-bottom:18px;text-transform:uppercase}
+.mv-text{line-height:1.7;color:rgba(255,255,255,.8)}
+.mv-tagline{text-align:center;margin-top:50px;font-family:'Barlow Condensed',sans-serif;font-size:20px;letter-spacing:8px;text-transform:uppercase;color:var(--gold)}
+
+/* MV BANNER */
+.mv-banner{position:relative;padding:140px 0;color:#fff;background-image:url('img/img_1.jpeg');background-size:cover;background-position:center;background-attachment:fixed}
+.mv-banner::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(13,33,64,.92) 0%,rgba(26,58,107,.85) 50%,rgba(30,87,153,.88) 100%)}
+.mv-banner-content{position:relative;z-index:2;max-width:780px}
+.mv-banner-title{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(2.2rem,5vw,3.8rem);line-height:1.05;text-transform:uppercase;margin-bottom:20px;color:#fff}
+.mv-banner-sub{font-size:18px;line-height:1.7;color:rgba(255,255,255,.88);margin-bottom:32px}
+@media(max-width:768px){.mv-banner{padding:90px 0;background-attachment:scroll}}
+
+/* STRENGTHS */
+.strength-card{background:#fff;padding:36px 28px;border-radius:4px;height:100%;border:1px solid #e5e9f0;position:relative;transition:transform .3s,box-shadow .3s}
+.strength-card:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(0,0,0,.08)}
+.strength-num{position:absolute;top:16px;right:20px;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:52px;color:rgba(192,32,42,.1);line-height:1}
+.strength-icon{font-size:34px;display:block;margin-bottom:18px}
+.strength-name{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:22px;color:var(--navy);margin-bottom:10px}
+.strength-desc{font-size:14px;line-height:1.6;color:#6a7a8a}
+
+/* SERVICES */
+#services{background:linear-gradient(160deg,#0d2140 0%,#1a3a6b 100%);color:#fff}
+#services .section-label{color:var(--red-light)}
+#services .section-title{color:#fff}
+.step-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);padding:28px 24px;border-radius:4px;cursor:pointer;transition:all .3s;height:100%}
+.step-card:hover,.step-card.active{background:rgba(192,32,42,.18);border-color:var(--red-light);transform:translateY(-4px)}
+.step-card.active{box-shadow:0 12px 30px rgba(230,57,70,.3)}
+.step-num-badge{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.step-num{width:42px;height:42px;border-radius:50%;background:var(--red);display:flex;align-items:center;justify-content:center;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:20px;color:#fff}
+.step-phase{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gold)}
+.step-title{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:20px;margin-bottom:10px;color:#fff}
+.step-desc{font-size:13px;line-height:1.6;color:rgba(255,255,255,.75)}
+
+/* PRODUCTS */
+#products{background:var(--off-white)}
+.nav-tabs-brand{border-bottom:2px solid #e5e9f0;margin:30px 0 36px;flex-wrap:wrap;gap:4px}
+.nav-tabs-brand .nav-link{border:none;border-bottom:3px solid transparent;border-radius:0;color:#6a7a8a;font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:15px;letter-spacing:1.5px;text-transform:uppercase;padding:12px 18px}
+.nav-tabs-brand .nav-link.active{color:var(--red);border-bottom-color:var(--red);background:transparent}
+.product-card{display:block;background:#fff;padding:24px;border-radius:4px;border:1px solid #e5e9f0;transition:all .3s;height:100%;text-decoration:none;color:inherit;cursor:pointer}
+.product-card:hover{transform:translateY(-4px);border-color:var(--red);box-shadow:0 14px 30px rgba(0,0,0,.08)}
+.product-cat-label{display:inline-block;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--red);font-weight:700;margin-bottom:10px}
+.product-name{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:18px;color:var(--navy);line-height:1.2}
+.prod-icon{font-size:28px;margin-top:14px}
+
+/* PHARMA */
+.pharma-img{width:100%;border-radius:4px;box-shadow:0 20px 60px rgba(0,0,0,.15)}
+.pharma-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:18px}
+.pharma-stat{background:var(--navy);color:#fff;padding:20px;text-align:center;border-radius:4px}
+.pharma-stat-num{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:32px;color:var(--gold)}
+.pharma-stat-label{font-size:11px;letter-spacing:2px;text-transform:uppercase;margin-top:4px;color:rgba(255,255,255,.8)}
+.pharma-item{display:flex;gap:16px;padding:20px;background:#fff;border-left:3px solid var(--red);border-radius:3px;margin-bottom:14px;box-shadow:0 4px 12px rgba(0,0,0,.04)}
+.pharma-item-icon{font-size:28px;flex-shrink:0}
+.pharma-item-name{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:18px;color:var(--navy);margin-bottom:4px}
+.pharma-item-desc{font-size:13px;line-height:1.5;color:#6a7a8a}
+
+/* QUALITY */
+#quality{background:linear-gradient(135deg,#0d2140 0%,#1a3a6b 100%);color:#fff}
+#quality .section-label{color:var(--gold)}
+#quality .section-title{color:#fff}
+.quality-item{display:flex;gap:16px;align-items:flex-start;padding:20px;background:rgba(255,255,255,.05);border-radius:4px;margin-bottom:14px;position:relative}
+.quality-item-num{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:26px;color:var(--gold);min-width:40px}
+.quality-item-icon{font-size:24px}
+.quality-item-name{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:17px;color:#fff;margin-bottom:4px}
+.quality-item-desc{font-size:13px;line-height:1.5;color:rgba(255,255,255,.7)}
+.cert-badge{background:rgba(255,255,255,.05);border:1px solid rgba(212,168,83,.3);padding:22px 14px;text-align:center;border-radius:4px;transition:all .3s}
+.cert-badge:hover{background:rgba(212,168,83,.15);border-color:var(--gold)}
+.cert-name{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:26px;color:var(--gold)}
+.cert-desc{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.6);margin-top:4px}
+
+/* OFFICE */
+.office-img{width:100%;height:100%;object-fit:cover;border-radius:4px;min-height:200px}
+.office-caption{text-align:center;margin-top:30px;color:#6a7a8a;font-style:italic}
+
+/* GLOBAL */
+#global{background:var(--navy);color:#fff;text-align:center}
+.countries-label{display:inline-block;color:var(--gold);font-size:13px;letter-spacing:3px;text-transform:uppercase;margin-bottom:14px}
+.countries-title{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:48px;margin-bottom:40px;text-transform:uppercase}
+.country-item{display:inline-flex;align-items:center;gap:10px;padding:14px 22px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:40px;margin:6px;transition:all .3s}
+.country-item:hover{background:rgba(212,168,83,.15);border-color:var(--gold)}
+.country-flag{font-size:22px}
+.country-name{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:15px;letter-spacing:1px;text-transform:uppercase}
+
+/* CONTACT */
+#contact{background:var(--red);color:#fff}
+.contact-title{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(2.5rem,5vw,4rem);line-height:1;color:#fff;margin-bottom:20px;text-transform:uppercase}
+.contact-sub{font-size:17px;line-height:1.6;color:rgba(255,255,255,.9);margin-bottom:30px}
+.contact-row{display:flex;gap:16px;align-items:flex-start;margin-bottom:20px}
+.contact-icon{font-size:22px;width:44px;height:44px;background:#fff;color:var(--red);display:flex;align-items:center;justify-content:center;border-radius:50%;flex-shrink:0}
+.contact-info{font-size:14px;line-height:1.6;color:#fff}
+.contact-form{background:#fff;padding:36px;border-radius:4px;box-shadow:0 20px 60px rgba(0,0,0,.08)}
+.contact-form label{display:block;font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:700;color:var(--navy);margin-bottom:6px}
+.contact-form .form-control,.contact-form .form-select{border:1px solid #e5e9f0;border-radius:2px;padding:12px 14px;font-size:14px;font-family:'Barlow',sans-serif}
+.contact-form .form-control:focus,.contact-form .form-select:focus{border-color:var(--red);box-shadow:0 0 0 .15rem rgba(192,32,42,.15)}
+.contact-form textarea{min-height:110px}
+.form-submit{background:var(--red);color:#fff;border:none;padding:14px 28px;font-weight:700;font-size:13px;letter-spacing:2px;text-transform:uppercase;border-radius:2px;width:100%;transition:background .2s}
+.form-submit:hover{background:var(--red-light)}
+
+/* FOOTER */
+footer{background:#081629;color:#fff;padding:40px 0;text-align:center}
+.footer-brand{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:18px;letter-spacing:4px;margin-bottom:10px}
+.footer-copy{font-size:12px;color:rgba(255,255,255,.5);letter-spacing:1px}
+.footer-links{margin-top:16px}
+.footer-links a{color:rgba(255,255,255,.7);margin:0 14px;font-size:12px;letter-spacing:2px;text-transform:uppercase;text-decoration:none}
+.footer-links a:hover{color:var(--red-light)}
+
+/* Fade in */
+.fade-in{opacity:0;transform:translateY(24px);transition:opacity .8s,transform .8s}
+.fade-in.visible{opacity:1;transform:none}
+
+@media(max-width:767px){
+  .about-img-accent{display:none}
+  .about-tag{left:10px;top:10px;padding:14px 18px}
+  .about-tag-num{font-size:30px}
+}
+
+
+.page-banner{padding:160px 0 90px;background:linear-gradient(135deg,#0d2140 0%,#1a3a6b 60%,#c0202a 130%);color:#fff;position:relative;overflow:hidden}
+.page-banner::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at top right,rgba(192,32,42,.35) 0%,transparent 60%)}
+.page-banner-inner{position:relative;z-index:2;max-width:760px}
+.page-banner .crumbs{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.65);margin-bottom:22px}
+.page-banner .crumbs a{color:rgba(255,255,255,.85);text-decoration:none}
+.page-banner .crumbs a:hover{color:var(--gold)}
+.page-banner .crumbs .sep{color:var(--red-light);margin:0 10px}
+.page-banner h1{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(2.5rem,6vw,4.5rem);line-height:1;text-transform:uppercase;margin-bottom:18px;color:#fff}
+.page-banner p{font-size:18px;color:rgba(255,255,255,.85);line-height:1.6;max-width:680px}
+
+</style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top" id="mainNav" style="background:rgba(13,33,64,.97);backdrop-filter:blur(12px);box-shadow:0 2px 30px rgba(0,0,0,.4)">
+  <div class="container-fluid px-4 px-lg-5">
+    <a class="navbar-brand" href="index.html"><span class="nav-logo-icon">O</span>Orient</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+      <ul class="navbar-nav align-items-lg-center">
+        <li class="nav-item"><a class="nav-link " href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link " href="products.html">Products</a></li>
+        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+        <li class="nav-item ms-lg-3"><a class="btn btn-brand" href="index.html#contact">Get a Quote</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section class="page-banner">
+  <div class="container">
+    <div class="page-banner-inner">
+      <div class="crumbs">
+        <a href="index.html">Home</a><span class="sep">/</span><span>Services</span>
+      </div>
+      <h1>Sourcing. Shipping. Support.</h1>
+      <p>An eight-step gamified journey from your first requirement brief to the final delivery — backed by GMP-grade pharma facility expertise and ISO/CE/FDA quality standards at every stage.</p>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="container">
+    <div class="text-center fade-in mb-5">
+      <span class="section-label">How We Work</span>
+      <h2 class="section-title">Your Sourcing Journey</h2>
+      <p class="section-sub text-white-50 mx-auto" style="max-width:650px">Sourcing to Shipping to Support. We've got you covered — every step of the way.</p>
+    </div>
+    <div class="row g-3">
+      <div class="col-sm-6 col-lg-3"><div class="step-card" data-step="1"><div class="step-num-badge"><div class="step-num">1</div><span class="step-phase">Phase 01</span></div><div class="step-title">Requirement Analysis</div><p class="step-desc">Active consultations to gather key project information and suggest the right solutions from our product matrix.</p></div></div>
+      <div class="col-sm-6 col-lg-3"><div class="step-card" data-step="2"><div class="step-num-badge"><div class="step-num">2</div><span class="step-phase">Phase 02</span></div><div class="step-title">Sourcing</div><p class="step-desc">Sourcing products and suppliers for your project, getting the best quotations. Handheld guidance on sourcing markets and products.</p></div></div>
+      <div class="col-sm-6 col-lg-3"><div class="step-card" data-step="3"><div class="step-num-badge"><div class="step-num">3</div><span class="step-phase">Phase 03</span></div><div class="step-title">Project Coordination</div><p class="step-desc">Assist clients during market visits to China. Aiding negotiations, translations, and follow-up with suppliers after purchase.</p></div></div>
+      <div class="col-sm-6 col-lg-3"><div class="step-card" data-step="4"><div class="step-num-badge"><div class="step-num">4</div><span class="step-phase">Phase 04</span></div><div class="step-title">Quality Check</div><p class="step-desc">Thorough inspection of materials during production, after production and before shipment depending on project requirements.</p></div></div>
+      <div class="col-sm-6 col-lg-3"><div class="step-card" data-step="5"><div class="step-num-badge"><div class="step-num">5</div><span class="step-phase">Phase 05</span></div><div class="step-title">Container Planning</div><p class="step-desc">Consolidation of materials, planning based on weight and cubic meters, arranging containers to optimize shipping costs.</p></div></div>
+      <div class="col-sm-6 col-lg-3"><div class="step-card" data-step="6"><div class="step-num-badge"><div class="step-num">6</div><span class="step-phase">Phase 06</span></div><div class="step-title">Loading of Materials</div><p class="step-desc">Container-wise planning and management for loading materials into the assigned containers with precision.</p></div></div>
+      <div class="col-sm-6 col-lg-3"><div class="step-card" data-step="7"><div class="step-num-badge"><div class="step-num">7</div><span class="step-phase">Phase 07</span></div><div class="step-title">Shipping &amp; Logistics</div><p class="step-desc">Execute logistical requirements from China to destination — best shipping lines, thorough export documentation, country-specific support.</p></div></div>
+      <div class="col-sm-6 col-lg-3"><div class="step-card" data-step="8"><div class="step-num-badge"><div class="step-num">8</div><span class="step-phase">Phase 08</span></div><div class="step-title">Support</div><p class="step-desc">Last-mile services for product placement, installation, and all relevant after-sales coordination and support.</p></div></div>
+    </div>
+  </div>
+</section>
+<section id="pharma">
+  <div class="container">
+    <div class="fade-in mb-5" style="max-width:700px">
+      <span class="section-label">Specialist Division</span>
+      <h2 class="section-title">Pharmaceutical &amp; Cleanroom Facilities</h2>
+      <p class="section-sub">We undertake consultancy and full supply for Pharmaceutical Manufacturing Facilities, Cleanroom Projects, and Healthcare Hospital Facility Projects — in partnership with TFK, our dedicated manufacturing partner.</p>
+    </div>
+    <div class="row g-5">
+      <div class="col-lg-6 fade-in">
+        <img src="img/img_5.jpeg" alt="Pharma Facility" class="pharma-img"/>
+        <div class="pharma-stats">
+          <div class="pharma-stat"><div class="pharma-stat-num">GMP</div><div class="pharma-stat-label">Compliant</div></div>
+          <div class="pharma-stat"><div class="pharma-stat-num">ISO</div><div class="pharma-stat-label">Certified</div></div>
+          <div class="pharma-stat"><div class="pharma-stat-num">FDA</div><div class="pharma-stat-label">Standards</div></div>
+          <div class="pharma-stat"><div class="pharma-stat-num">CE</div><div class="pharma-stat-label">Marked</div></div>
+        </div>
+      </div>
+      <div class="col-lg-6 fade-in">
+        <div class="pharma-item"><span class="pharma-item-icon">🏭</span><div><div class="pharma-item-name">Pharma Manufacturing Facilities</div><div class="pharma-item-desc">Complete turnkey setup for pharmaceutical production lines with GMP-compliant design.</div></div></div>
+        <div class="pharma-item"><span class="pharma-item-icon">🧪</span><div><div class="pharma-item-name">Cleanroom Projects</div><div class="pharma-item-desc">ISO Class cleanrooms with controlled environments for sensitive manufacturing operations.</div></div></div>
+        <div class="pharma-item"><span class="pharma-item-icon">🏥</span><div><div class="pharma-item-name">Healthcare Hospital Facilities</div><div class="pharma-item-desc">Full consultancy and supply for hospital fit-out, including specialized medical furniture.</div></div></div>
+        <div class="pharma-item"><span class="pharma-item-icon">🔬</span><div><div class="pharma-item-name">Laboratory Steel Furniture</div><div class="pharma-item-desc">Premium stainless steel lab furniture and equipment for research and clinical environments.</div></div></div>
+        <div class="pharma-item"><span class="pharma-item-icon">📦</span><div><div class="pharma-item-name">Production Packaging Lines</div><div class="pharma-item-desc">Automated packaging solutions for tablets, capsules, blister packs, and liquid dosage forms.</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="quality">
+  <div class="container">
+    <div class="fade-in mb-5" style="max-width:600px">
+      <span class="section-label">Standards &amp; Assurance</span>
+      <h2 class="section-title">Quality &amp; Certifications</h2>
+      <p class="section-sub text-white-50">All products are sourced from reputable manufacturers with strict adherence to international standards. We maintain rigorous quality control throughout the entire supply chain.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-lg-7 fade-in">
+        <div class="quality-item"><div class="quality-item-num">01</div><span class="quality-item-icon">🔎</span><div><div class="quality-item-name">Pre-Production Audit</div><div class="quality-item-desc">Supplier verification, facility audit, and capability assessment before order placement.</div></div></div>
+        <div class="quality-item"><div class="quality-item-num">02</div><span class="quality-item-icon">📋</span><div><div class="quality-item-name">In-Process Inspection</div><div class="quality-item-desc">Real-time quality monitoring during manufacturing to catch issues early.</div></div></div>
+        <div class="quality-item"><div class="quality-item-num">03</div><span class="quality-item-icon">✅</span><div><div class="quality-item-name">Pre-Shipment Inspection</div><div class="quality-item-desc">Final quality check before loading — size, function, safety, and packing verification.</div></div></div>
+        <div class="quality-item"><div class="quality-item-num">04</div><span class="quality-item-icon">🧾</span><div><div class="quality-item-name">Third-Party Inspection</div><div class="quality-item-desc">SGS and Intertek certified inspectors providing unbiased verification and test reports.</div></div></div>
+      </div>
+      <div class="col-lg-5 fade-in">
+        <div class="row g-3">
+          <div class="col-6"><div class="cert-badge"><div class="cert-name">ISO</div><div class="cert-desc">Int'l Standards</div></div></div>
+          <div class="col-6"><div class="cert-badge"><div class="cert-name">CE</div><div class="cert-desc">European Mark</div></div></div>
+          <div class="col-6"><div class="cert-badge"><div class="cert-name">FDA</div><div class="cert-desc">US Compliance</div></div></div>
+          <div class="col-6"><div class="cert-badge"><div class="cert-name">ASTM</div><div class="cert-desc">Material Testing</div></div></div>
+          <div class="col-6"><div class="cert-badge"><div class="cert-name">UL</div><div class="cert-desc">Underwriters Lab</div></div></div>
+          <div class="col-6"><div class="cert-badge"><div class="cert-name">ETL</div><div class="cert-desc">Intertek ETL</div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="cta" style="background:var(--red);color:#fff;padding:70px 0;text-align:center">
+  <div class="container">
+    <h2 style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(2rem,4.5vw,3.2rem);text-transform:uppercase;margin-bottom:18px;color:#fff">Ready When You Are</h2>
+    <p style="font-size:17px;color:rgba(255,255,255,.9);max-width:620px;margin:0 auto 30px">Tell us your specification, volume and destination. We'll match you with verified suppliers and send quotations within 48 hours.</p>
+    <a href="index.html#contact" style="display:inline-block;background:#fff;color:var(--red);padding:14px 30px;font-weight:700;letter-spacing:2px;text-transform:uppercase;border-radius:2px;font-size:13px;text-decoration:none">Request a Quote</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-brand">⊕ ORIENT EXPORTS LIMITED</div>
+    <div class="footer-copy">© 2025 Orient Exports Limited · Guangzhou, China · Australia / China / Canada / India / USA</div>
+    <div class="footer-links">
+      <a href="about.html">About</a><a href="services.html">Services</a><a href="products.html">Products</a><a href="blog.html">Blog</a><a href="faq.html">FAQ</a><a href="index.html#contact">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting&&e.target.classList.add('visible')),{threshold:.1});
+document.querySelectorAll('.fade-in').forEach(el=>io.observe(el));
+let cur=1;const cards=document.querySelectorAll('.step-card');
+if(cards.length){
+  function act(n){cards.forEach(c=>{const s=+c.dataset.step;c.classList.toggle('active',s===n);c.classList.toggle('completed',s<n)});cur=n}
+  act(1);cards.forEach(c=>c.addEventListener('click',()=>act(+c.dataset.step)));
+  setInterval(()=>act(cur<8?cur+1:1),3500);
+}
+</script>
+</body>
+</html>

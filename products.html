@@ -3,10 +3,11 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Orient Exports Limited — Where China Meets The World. Reliably.</title>
+<title>Products — Orient Exports Limited</title>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;700;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet"/>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
 <style>
+
 :root{
   --navy:#0d2140;--blue:#1a3a6b;--mid-blue:#1e5799;--red:#c0202a;--red-light:#e63946;
   --gold:#d4a853;--white:#fff;--off-white:#f5f7fa;--gray:#8899aa;--text:#1a2a3a;
@@ -193,181 +194,50 @@ footer{background:#081629;color:#fff;padding:40px 0;text-align:center}
   .about-tag{left:10px;top:10px;padding:14px 18px}
   .about-tag-num{font-size:30px}
 }
+
+
+.page-banner{padding:160px 0 90px;background:linear-gradient(135deg,#0d2140 0%,#1a3a6b 60%,#c0202a 130%);color:#fff;position:relative;overflow:hidden}
+.page-banner::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at top right,rgba(192,32,42,.35) 0%,transparent 60%)}
+.page-banner-inner{position:relative;z-index:2;max-width:760px}
+.page-banner .crumbs{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.65);margin-bottom:22px}
+.page-banner .crumbs a{color:rgba(255,255,255,.85);text-decoration:none}
+.page-banner .crumbs a:hover{color:var(--gold)}
+.page-banner .crumbs .sep{color:var(--red-light);margin:0 10px}
+.page-banner h1{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(2.5rem,6vw,4.5rem);line-height:1;text-transform:uppercase;margin-bottom:18px;color:#fff}
+.page-banner p{font-size:18px;color:rgba(255,255,255,.85);line-height:1.6;max-width:680px}
+
 </style>
 </head>
-<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="80">
-
-<!-- NAV -->
-<nav class="navbar navbar-expand-lg fixed-top navbar-dark-custom" id="mainNav">
+<body>
+<nav class="navbar navbar-expand-lg fixed-top" id="mainNav" style="background:rgba(13,33,64,.97);backdrop-filter:blur(12px);box-shadow:0 2px 30px rgba(0,0,0,.4)">
   <div class="container-fluid px-4 px-lg-5">
-    <a class="navbar-brand" href="#hero"><span class="nav-logo-icon">O</span>Orient</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+    <a class="navbar-brand" href="index.html"><span class="nav-logo-icon">O</span>Orient</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"><span class="navbar-toggler-icon"></span></button>
     <div class="collapse navbar-collapse justify-content-end" id="navMenu">
       <ul class="navbar-nav align-items-lg-center">
-        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-        <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
-        <li class="nav-item"><a class="nav-link" href="#pharma">Pharma</a></li>
-        <li class="nav-item"><a class="nav-link" href="#quality">Quality</a></li>
+        <li class="nav-item"><a class="nav-link " href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link " href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link active" href="products.html">Products</a></li>
         <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
         <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
-        <li class="nav-item ms-lg-3"><a class="btn btn-brand" href="#contact">Get a Quote</a></li>
+        <li class="nav-item ms-lg-3"><a class="btn btn-brand" href="index.html#contact">Get a Quote</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-<!-- HERO -->
-<section id="hero">
-  <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4500">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
-      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
-      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
-      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3"></button>
-      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="4"></button>
-    </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active"></div>
-      <div class="carousel-item"></div>
-      <div class="carousel-item"></div>
-      <div class="carousel-item"></div>
-      <div class="carousel-item"></div>
-    </div>
-  </div>
-  <div class="hero-overlay"></div>
-  <div class="hero-content-wrap">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-9">
-          <span class="hero-badge">Guangzhou, China → Global</span>
-          <h1 class="hero-title">Where China<br/>Meets the <span class="accent">World.</span><br/>Reliably.</h1>
-          <p class="hero-sub">We help importers, brands and distributors source high-quality products from China — with verified suppliers, strict quality control and end-to-end logistics support.</p>
-          <div class="d-flex flex-wrap gap-3">
-            <a href="#contact" class="btn btn-brand">Get a Sourcing Quote</a>
-            <a href="#services" class="btn btn-outline-brand">How It Works</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- TICKER -->
-<div class="ticker">
-  <div class="ticker-inner">
-    <span>Pharmaceuticals &amp; Healthcare</span><span>Engineering &amp; Industrial Machinery</span><span>Advanced Building Materials</span><span>Premium Agricultural Products</span><span>Cleanroom Projects</span><span>Laboratory Equipment</span><span>Logistics &amp; Consolidation</span><span>ISO · CE · FDA · ASTM Certified</span>
-    <span>Pharmaceuticals &amp; Healthcare</span><span>Engineering &amp; Industrial Machinery</span><span>Advanced Building Materials</span><span>Premium Agricultural Products</span><span>Cleanroom Projects</span><span>Laboratory Equipment</span><span>Logistics &amp; Consolidation</span><span>ISO · CE · FDA · ASTM Certified</span>
-  </div>
-</div>
-
-<!-- ABOUT -->
-<section id="about">
+<section class="page-banner">
   <div class="container">
-    <div class="row g-5 align-items-center">
-      <div class="col-lg-6 fade-in">
-        <div class="about-img-wrap">
-          <img src="img/img_3.jpeg" alt="Orient Exports" class="about-img-main"/>
-          <img src="img/img_4.jpeg" alt="Our Office" class="about-img-accent d-none d-md-block"/>
-          <div class="about-tag"><span class="about-tag-num">10+</span><span class="about-tag-txt">Years Experience</span></div>
-        </div>
+    <div class="page-banner-inner">
+      <div class="crumbs">
+        <a href="index.html">Home</a><span class="sep">/</span><span>Products</span>
       </div>
-      <div class="col-lg-6 fade-in">
-        <span class="section-label">Who We Are</span>
-        <h2 class="section-title">Orient Exports Limited</h2>
-        <p class="section-sub mb-4">A trusted export trading and sourcing powerhouse headquartered in Guangzhou — the beating heart of China's manufacturing ecosystem. We deliver end-to-end product sourcing and export solutions across four high-impact sectors.</p>
-        <div class="row g-3">
-          <div class="col-sm-6"><div class="sector-card"><span class="sector-icon">💊</span><span class="sector-name">Pharmaceuticals &amp; Healthcare</span></div></div>
-          <div class="col-sm-6"><div class="sector-card"><span class="sector-icon">⚙️</span><span class="sector-name">Engineering &amp; Industrial</span></div></div>
-          <div class="col-sm-6"><div class="sector-card"><span class="sector-icon">🌾</span><span class="sector-name">Premium Agriculture</span></div></div>
-          <div class="col-sm-6"><div class="sector-card"><span class="sector-icon">🏗️</span><span class="sector-name">Advanced Building Materials</span></div></div>
-        </div>
-      </div>
+      <h1>Global Product Portfolio</h1>
+      <p>Sourcing simplified. Value multiplied. Browse our six product categories — from pharma & cleanroom equipment to building materials and operating supplies. Every item is sourced from verified Chinese manufacturers with full quality control.</p>
     </div>
   </div>
 </section>
 
-<!-- MISSION -->
-<section id="mission">
-  <div class="container">
-    <div class="row g-4">
-      <div class="col-md-6 fade-in">
-        <div class="mv-card">
-          <div class="mv-icon">🎯</div>
-          <div class="mv-label">Our Purpose</div>
-          <div class="mv-title">Mission</div>
-          <p class="mv-text">To empower global businesses with seamless access to China's manufacturing excellence through trusted sourcing, transparent pricing, and flawless logistics — driving growth, innovation, and healthier lives worldwide.</p>
-        </div>
-      </div>
-      <div class="col-md-6 fade-in">
-        <div class="mv-card">
-          <div class="mv-icon">👁️</div>
-          <div class="mv-label">Our Horizon</div>
-          <div class="mv-title">Vision</div>
-          <p class="mv-text">To become the world's most respected gateway to Chinese industrial and pharmaceutical excellence — recognized for unwavering integrity, professional mastery, and an unrivalled global network that turns ambition into reality.</p>
-        </div>
-      </div>
-    </div>
-    <div class="mv-tagline">Durability · Sustainability · Partnership</div>
-  </div>
-</section>
-
-<!-- MISSION BANNER -->
-<section class="mv-banner">
-  <div class="container mv-banner-content">
-    <span class="section-label" style="color:var(--gold)">Our Foundation</span>
-    <h2 class="mv-banner-title">Driven By Mission.<br/>Guided By Vision.</h2>
-    <p class="mv-banner-sub">Integrity, precision and partnership are non-negotiable. Every shipment we handle reflects a commitment built over a decade of sourcing excellence — across Pharma, Industrial, Building and Agriculture.</p>
-    <a href="#services" class="btn btn-brand">Explore Our Process</a>
-  </div>
-</section>
-
-<!-- STRENGTHS -->
-<section id="strengths">
-  <div class="container">
-    <div class="row mb-5">
-      <div class="col-lg-6 fade-in">
-        <span class="section-label">Why Choose Us</span>
-        <h2 class="section-title">Our Core Strengths</h2>
-      </div>
-      <div class="col-lg-6 fade-in d-flex align-items-end">
-        <p class="section-sub">From factory sourcing to global delivery — we combine local expertise with global standards to ensure reliability in every transaction.</p>
-      </div>
-    </div>
-    <div class="row g-4 fade-in">
-      <div class="col-md-6 col-lg-4"><div class="strength-card"><div class="strength-num">01</div><span class="strength-icon">🕸️</span><div class="strength-name">Extensive Supplier Network</div><p class="strength-desc">Comprehensive network of trusted suppliers and verified manufacturers across multiple industries.</p></div></div>
-      <div class="col-md-6 col-lg-4"><div class="strength-card"><div class="strength-num">02</div><span class="strength-icon">🔍</span><div class="strength-name">Dedicated Sourcing Expertise</div><p class="strength-desc">Deep understanding of international trade processes, supplier auditing, and market dynamics.</p></div></div>
-      <div class="col-md-6 col-lg-4"><div class="strength-card"><div class="strength-num">03</div><span class="strength-icon">🚢</span><div class="strength-name">Efficient Logistics</div><p class="strength-desc">Strategic partnerships with leading logistics providers ensuring prompt delivery and competitive pricing.</p></div></div>
-      <div class="col-md-6 col-lg-4"><div class="strength-card"><div class="strength-num">04</div><span class="strength-icon">✅</span><div class="strength-name">Quality Assurance</div><p class="strength-desc">Unwavering commitment to quality control, rigorous testing and compliance with international standards.</p></div></div>
-      <div class="col-md-6 col-lg-4"><div class="strength-card"><div class="strength-num">05</div><span class="strength-icon">🏭</span><div class="strength-name">Facility Expertise</div><p class="strength-desc">Experienced in pharma, cleanroom, hospital, and laboratory projects — seamless compliant setups.</p></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- SERVICES -->
-<section id="services">
-  <div class="container">
-    <div class="text-center fade-in mb-5">
-      <span class="section-label">How We Work</span>
-      <h2 class="section-title">Your Sourcing Journey</h2>
-      <p class="section-sub text-white-50 mx-auto" style="max-width:650px">Sourcing to Shipping to Support. We've got you covered — every step of the way.</p>
-    </div>
-    <div class="row g-3">
-      <div class="col-sm-6 col-lg-3"><div class="step-card" data-step="1"><div class="step-num-badge"><div class="step-num">1</div><span class="step-phase">Phase 01</span></div><div class="step-title">Requirement Analysis</div><p class="step-desc">Active consultations to gather key project information and suggest the right solutions from our product matrix.</p></div></div>
-      <div class="col-sm-6 col-lg-3"><div class="step-card" data-step="2"><div class="step-num-badge"><div class="step-num">2</div><span class="step-phase">Phase 02</span></div><div class="step-title">Sourcing</div><p class="step-desc">Sourcing products and suppliers for your project, getting the best quotations. Handheld guidance on sourcing markets and products.</p></div></div>
-      <div class="col-sm-6 col-lg-3"><div class="step-card" data-step="3"><div class="step-num-badge"><div class="step-num">3</div><span class="step-phase">Phase 03</span></div><div class="step-title">Project Coordination</div><p class="step-desc">Assist clients during market visits to China. Aiding negotiations, translations, and follow-up with suppliers after purchase.</p></div></div>
-      <div class="col-sm-6 col-lg-3"><div class="step-card" data-step="4"><div class="step-num-badge"><div class="step-num">4</div><span class="step-phase">Phase 04</span></div><div class="step-title">Quality Check</div><p class="step-desc">Thorough inspection of materials during production, after production and before shipment depending on project requirements.</p></div></div>
-      <div class="col-sm-6 col-lg-3"><div class="step-card" data-step="5"><div class="step-num-badge"><div class="step-num">5</div><span class="step-phase">Phase 05</span></div><div class="step-title">Container Planning</div><p class="step-desc">Consolidation of materials, planning based on weight and cubic meters, arranging containers to optimize shipping costs.</p></div></div>
-      <div class="col-sm-6 col-lg-3"><div class="step-card" data-step="6"><div class="step-num-badge"><div class="step-num">6</div><span class="step-phase">Phase 06</span></div><div class="step-title">Loading of Materials</div><p class="step-desc">Container-wise planning and management for loading materials into the assigned containers with precision.</p></div></div>
-      <div class="col-sm-6 col-lg-3"><div class="step-card" data-step="7"><div class="step-num-badge"><div class="step-num">7</div><span class="step-phase">Phase 07</span></div><div class="step-title">Shipping &amp; Logistics</div><p class="step-desc">Execute logistical requirements from China to destination — best shipping lines, thorough export documentation, country-specific support.</p></div></div>
-      <div class="col-sm-6 col-lg-3"><div class="step-card" data-step="8"><div class="step-num-badge"><div class="step-num">8</div><span class="step-phase">Phase 08</span></div><div class="step-title">Support</div><p class="step-desc">Last-mile services for product placement, installation, and all relevant after-sales coordination and support.</p></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- PRODUCTS -->
 <section id="products">
   <div class="container">
     <div class="fade-in" style="max-width:600px">
@@ -455,159 +325,34 @@ footer{background:#081629;color:#fff;padding:40px 0;text-align:center}
   </div>
 </section>
 
-<!-- PHARMA -->
-<section id="pharma">
+<section id="cta" style="background:var(--red);color:#fff;padding:70px 0;text-align:center">
   <div class="container">
-    <div class="fade-in mb-5" style="max-width:700px">
-      <span class="section-label">Specialist Division</span>
-      <h2 class="section-title">Pharmaceutical &amp; Cleanroom Facilities</h2>
-      <p class="section-sub">We undertake consultancy and full supply for Pharmaceutical Manufacturing Facilities, Cleanroom Projects, and Healthcare Hospital Facility Projects — in partnership with TFK, our dedicated manufacturing partner.</p>
-    </div>
-    <div class="row g-5">
-      <div class="col-lg-6 fade-in">
-        <img src="img/img_5.jpeg" alt="Pharma Facility" class="pharma-img"/>
-        <div class="pharma-stats">
-          <div class="pharma-stat"><div class="pharma-stat-num">GMP</div><div class="pharma-stat-label">Compliant</div></div>
-          <div class="pharma-stat"><div class="pharma-stat-num">ISO</div><div class="pharma-stat-label">Certified</div></div>
-          <div class="pharma-stat"><div class="pharma-stat-num">FDA</div><div class="pharma-stat-label">Standards</div></div>
-          <div class="pharma-stat"><div class="pharma-stat-num">CE</div><div class="pharma-stat-label">Marked</div></div>
-        </div>
-      </div>
-      <div class="col-lg-6 fade-in">
-        <div class="pharma-item"><span class="pharma-item-icon">🏭</span><div><div class="pharma-item-name">Pharma Manufacturing Facilities</div><div class="pharma-item-desc">Complete turnkey setup for pharmaceutical production lines with GMP-compliant design.</div></div></div>
-        <div class="pharma-item"><span class="pharma-item-icon">🧪</span><div><div class="pharma-item-name">Cleanroom Projects</div><div class="pharma-item-desc">ISO Class cleanrooms with controlled environments for sensitive manufacturing operations.</div></div></div>
-        <div class="pharma-item"><span class="pharma-item-icon">🏥</span><div><div class="pharma-item-name">Healthcare Hospital Facilities</div><div class="pharma-item-desc">Full consultancy and supply for hospital fit-out, including specialized medical furniture.</div></div></div>
-        <div class="pharma-item"><span class="pharma-item-icon">🔬</span><div><div class="pharma-item-name">Laboratory Steel Furniture</div><div class="pharma-item-desc">Premium stainless steel lab furniture and equipment for research and clinical environments.</div></div></div>
-        <div class="pharma-item"><span class="pharma-item-icon">📦</span><div><div class="pharma-item-name">Production Packaging Lines</div><div class="pharma-item-desc">Automated packaging solutions for tablets, capsules, blister packs, and liquid dosage forms.</div></div></div>
-      </div>
-    </div>
+    <h2 style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(2rem,4.5vw,3.2rem);text-transform:uppercase;margin-bottom:18px;color:#fff">Ready When You Are</h2>
+    <p style="font-size:17px;color:rgba(255,255,255,.9);max-width:620px;margin:0 auto 30px">Tell us your specification, volume and destination. We'll match you with verified suppliers and send quotations within 48 hours.</p>
+    <a href="index.html#contact" style="display:inline-block;background:#fff;color:var(--red);padding:14px 30px;font-weight:700;letter-spacing:2px;text-transform:uppercase;border-radius:2px;font-size:13px;text-decoration:none">Request a Quote</a>
   </div>
 </section>
 
-<!-- QUALITY -->
-<section id="quality">
-  <div class="container">
-    <div class="fade-in mb-5" style="max-width:600px">
-      <span class="section-label">Standards &amp; Assurance</span>
-      <h2 class="section-title">Quality &amp; Certifications</h2>
-      <p class="section-sub text-white-50">All products are sourced from reputable manufacturers with strict adherence to international standards. We maintain rigorous quality control throughout the entire supply chain.</p>
-    </div>
-    <div class="row g-4">
-      <div class="col-lg-7 fade-in">
-        <div class="quality-item"><div class="quality-item-num">01</div><span class="quality-item-icon">🔎</span><div><div class="quality-item-name">Pre-Production Audit</div><div class="quality-item-desc">Supplier verification, facility audit, and capability assessment before order placement.</div></div></div>
-        <div class="quality-item"><div class="quality-item-num">02</div><span class="quality-item-icon">📋</span><div><div class="quality-item-name">In-Process Inspection</div><div class="quality-item-desc">Real-time quality monitoring during manufacturing to catch issues early.</div></div></div>
-        <div class="quality-item"><div class="quality-item-num">03</div><span class="quality-item-icon">✅</span><div><div class="quality-item-name">Pre-Shipment Inspection</div><div class="quality-item-desc">Final quality check before loading — size, function, safety, and packing verification.</div></div></div>
-        <div class="quality-item"><div class="quality-item-num">04</div><span class="quality-item-icon">🧾</span><div><div class="quality-item-name">Third-Party Inspection</div><div class="quality-item-desc">SGS and Intertek certified inspectors providing unbiased verification and test reports.</div></div></div>
-      </div>
-      <div class="col-lg-5 fade-in">
-        <div class="row g-3">
-          <div class="col-6"><div class="cert-badge"><div class="cert-name">ISO</div><div class="cert-desc">Int'l Standards</div></div></div>
-          <div class="col-6"><div class="cert-badge"><div class="cert-name">CE</div><div class="cert-desc">European Mark</div></div></div>
-          <div class="col-6"><div class="cert-badge"><div class="cert-name">FDA</div><div class="cert-desc">US Compliance</div></div></div>
-          <div class="col-6"><div class="cert-badge"><div class="cert-name">ASTM</div><div class="cert-desc">Material Testing</div></div></div>
-          <div class="col-6"><div class="cert-badge"><div class="cert-name">UL</div><div class="cert-desc">Underwriters Lab</div></div></div>
-          <div class="col-6"><div class="cert-badge"><div class="cert-name">ETL</div><div class="cert-desc">Intertek ETL</div></div></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- OFFICE -->
-<section id="office">
-  <div class="container">
-    <div class="fade-in mb-5" style="max-width:700px">
-      <span class="section-label">Our Base</span>
-      <h2 class="section-title">Guangzhou<br/>Headquarters</h2>
-      <p class="section-sub">Strategically located near Guangzhou Port and Baiyun International Airport — one of China's most dynamic trade and logistics centers. Our modern office environment combines local expertise with global standards.</p>
-    </div>
-    <div class="row g-3 fade-in">
-      <div class="col-md-6"><img src="img/img_6.jpeg" alt="Orient Offices" class="office-img"/></div>
-      <div class="col-md-6">
-        <div class="row g-3">
-          <div class="col-6"><img src="img/img_7.jpeg" alt="Our Team" class="office-img"/></div>
-          <div class="col-6"><img src="img/img_8.jpeg" alt="Operations" class="office-img"/></div>
-          <div class="col-6"><img src="img/img_9.jpeg" alt="Logistics" class="office-img"/></div>
-          <div class="col-6"><img src="img/img_10.jpeg" alt="Contact" class="office-img"/></div>
-        </div>
-      </div>
-    </div>
-    <p class="office-caption fade-in">Modern collaborative workspace · Guangzhou, China · Where every shipment begins its global journey</p>
-  </div>
-</section>
-
-<!-- GLOBAL -->
-<section id="global">
-  <div class="container">
-    <span class="countries-label">Global Reach</span>
-    <h2 class="countries-title">Markets We Serve</h2>
-    <div class="fade-in">
-      <div class="country-item"><span class="country-flag">🇦🇺</span><span class="country-name">Australia</span></div>
-      <div class="country-item"><span class="country-flag">🇺🇸</span><span class="country-name">USA</span></div>
-      <div class="country-item"><span class="country-flag">🇨🇦</span><span class="country-name">Canada</span></div>
-      <div class="country-item"><span class="country-flag">🌍</span><span class="country-name">Africa</span></div>
-      <div class="country-item"><span class="country-flag">🌏</span><span class="country-name">SE Asia</span></div>
-      <div class="country-item"><span class="country-flag">🌎</span><span class="country-name">Latin America</span></div>
-      <div class="country-item"><span class="country-flag">🇮🇳</span><span class="country-name">India</span></div>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact">
-  <div class="container">
-    <div class="row g-5">
-      <div class="col-lg-6 fade-in">
-        <h2 class="contact-title">Let's Source<br/>Together.</h2>
-        <p class="contact-sub">Tell us what you need. We'll find the right products, the right suppliers, and the right price — from China to your door.</p>
-        <div class="contact-row"><div class="contact-icon">📧</div><div class="contact-info">info@orientoverseas.com<br/>orient.cn@outlook.com</div></div>
-        <div class="contact-row"><div class="contact-icon">📱</div><div class="contact-info">+86 13425603432 (China)<br/>+61 452331595 (Australia)</div></div>
-        <div class="contact-row"><div class="contact-icon">💬</div><div class="contact-info">WeChat: orientoverseas<br/>Instagram: @oritentoverseas</div></div>
-        <div class="contact-row"><div class="contact-icon">📍</div><div class="contact-info">Guangzhou Orient Exports Limited<br/>Orient Exports Hong Kong Limited</div></div>
-      </div>
-      <div class="col-lg-6 fade-in">
-        <form class="contact-form">
-          <div class="mb-3"><label>Your Name</label><input type="text" class="form-control" placeholder="Full name"/></div>
-          <div class="mb-3"><label>Company</label><input type="text" class="form-control" placeholder="Company name"/></div>
-          <div class="mb-3"><label>Country</label><input type="text" class="form-control" placeholder="Your country"/></div>
-          <div class="mb-3"><label>Product Category</label>
-            <select class="form-select">
-              <option>Pharmaceuticals &amp; Healthcare</option>
-              <option>Engineering &amp; Industrial</option>
-              <option>Building Materials</option>
-              <option>Agricultural Products</option>
-              <option>Operating Supplies</option>
-              <option>Other</option>
-            </select>
-          </div>
-          <div class="mb-3"><label>Message</label><textarea class="form-control" placeholder="Describe your requirements..."></textarea></div>
-          <button type="button" class="form-submit">Send Enquiry →</button>
-        </form>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
 <footer>
   <div class="container">
     <div class="footer-brand">⊕ ORIENT EXPORTS LIMITED</div>
     <div class="footer-copy">© 2025 Orient Exports Limited · Guangzhou, China · Australia / China / Canada / India / USA</div>
     <div class="footer-links">
-      <a href="#about">About</a><a href="#services">Services</a><a href="#products">Products</a><a href="blog.html">Blog</a><a href="faq.html">FAQ</a><a href="#contact">Contact</a>
+      <a href="about.html">About</a><a href="services.html">Services</a><a href="products.html">Products</a><a href="blog.html">Blog</a><a href="faq.html">FAQ</a><a href="index.html#contact">Contact</a>
     </div>
   </div>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-window.addEventListener('scroll',()=>{document.getElementById('mainNav').classList.toggle('scrolled',window.scrollY>60)});
 const io=new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting&&e.target.classList.add('visible')),{threshold:.1});
 document.querySelectorAll('.fade-in').forEach(el=>io.observe(el));
 let cur=1;const cards=document.querySelectorAll('.step-card');
-function act(n){cards.forEach(c=>{const s=+c.dataset.step;c.classList.toggle('active',s===n);c.classList.toggle('completed',s<n)});cur=n}
-act(1);cards.forEach(c=>c.addEventListener('click',()=>act(+c.dataset.step)));
-setInterval(()=>act(cur<8?cur+1:1),3000);
+if(cards.length){
+  function act(n){cards.forEach(c=>{const s=+c.dataset.step;c.classList.toggle('active',s===n);c.classList.toggle('completed',s<n)});cur=n}
+  act(1);cards.forEach(c=>c.addEventListener('click',()=>act(+c.dataset.step)));
+  setInterval(()=>act(cur<8?cur+1:1),3500);
+}
 </script>
 </body>
 </html>
