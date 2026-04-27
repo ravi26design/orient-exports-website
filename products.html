@@ -353,6 +353,16 @@ if(cards.length){
   act(1);cards.forEach(c=>c.addEventListener('click',()=>act(+c.dataset.step)));
   setInterval(()=>act(cur<8?cur+1:1),3500);
 }
+// Activate tab from URL hash (e.g. products.html#tab-api)
+(function(){
+  const hash=location.hash;
+  if(!hash||!hash.startsWith('#tab-')) return;
+  const trigger=document.querySelector(`[data-bs-target="${hash}"]`);
+  if(trigger&&window.bootstrap){
+    new bootstrap.Tab(trigger).show();
+    setTimeout(()=>{const sec=document.getElementById('products');if(sec)sec.scrollIntoView({behavior:'smooth',block:'start'})},150);
+  }
+})();
 </script>
 </body>
 </html>
